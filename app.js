@@ -24,12 +24,23 @@ function update() {
     entry.hidden = !visible; if (visible) count++;
   });
   buttons.forEach(button => button.setAttribute('aria-pressed', String(button.textContent === 'All topics' ? selectedTopics.size === 0 : selectedTopics.has(button.textContent))));
-  document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'entry' : 'entries'} in the collection`;
+  document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'entry' : 'entries'}`;
   document.querySelector('#empty').hidden = count !== 0;
+  document.querySelector('#clear-topics').hidden = selectedTopics.size === 0;
+  document.querySelector('#search-clear').hidden = search.value.length === 0;
 }
 function reset() { selectedTopics.clear(); search.value = ''; update(); }
 search.addEventListener('input', update);
-document.querySelector('#reset').addEventListener('click', reset);
+document.querySelector('#clear-topics').addEventListener('click', () => {
+  selectedTopics.clear();
+  buttons[0].focus();
+  update();
+});
+document.querySelector('#search-clear').addEventListener('click', () => {
+  search.value = '';
+  search.focus();
+  update();
+});
 document.querySelector('#clear-search').addEventListener('click', () => { reset(); search.focus(); });
 document.querySelector('.tools').hidden = false; filters.hidden = false;
 document.addEventListener('keydown', event => {
