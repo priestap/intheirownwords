@@ -13,7 +13,7 @@ class Page(HTMLParser):
         if 'id' in a: self.ids.append(a['id'])
         if tag=='article': self.articles+=1
         if tag=='a': self.links.append(a.get('href',''))
-collections=[('index.html','quotes.json',13),('cessationists.html','cessationists.json',6),('christs-return.html','christs-return.json',6)]
+collections=[('index.html','quotes.json',13),('cessationists.html','cessationists.json',7),('christs-return.html','christs-return.json',6)]
 for page_file,data_file,expected in collections:
     html=(root/page_file).read_text()
     page=Page(); page.feed(html)
@@ -77,7 +77,7 @@ for conf in confessions:
 assert '{{ENTRIES}}' not in (root/'index.html').read_text()
 modern=json.loads((root/'cessationists.json').read_text())
 cessationist_confessions=[c for q in modern for c in q.get('confessions',[])]
-assert len(cessationist_confessions)==6, 'Expected six cessationist confessional excerpts'
+assert len(cessationist_confessions)==8, 'Expected eight cessationist confessional excerpts'
 for c in cessationist_confessions:
     assert all(c.get(key) for key in ['quote','reference','url','edition','context','verified'])
     assert urlparse(c['url']).scheme=='https'
@@ -108,11 +108,11 @@ for q in modern:
         source=voice['url'].split('#')[0]
         words_by_source[source]=words_by_source.get(source,0)+len(voice['quote'].split())
         supporting_count+=1
-assert supporting_count==3, 'Expected three supporting excerpts'
+assert supporting_count==4, 'Expected four supporting excerpts'
 assert all(count<=25 for count in words_by_source.values()), 'Modern excerpts exceed 25 words per source'
 workflow=(root/'.github/workflows/pages.yml').read_text()
 assert 'cessationists.html' in workflow and 'cessationists.json' in workflow
-print('PASS: 32 Calvin confessional excerpts, six cessationist confessional excerpts, six attributed criticisms, three supporting excerpts, brief modern excerpts, and all three collections packaged for GitHub Pages.')
+print('PASS: 32 Calvin confessional excerpts, eight cessationist confessional excerpts, seven attributed criticisms, four supporting excerpts, brief modern excerpts, and all three collections packaged for GitHub Pages.')
 
 hope=json.loads((root/'christs-return.json').read_text())
 hope_html=(root/'christs-return.html').read_text()

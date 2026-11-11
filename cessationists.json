@@ -245,5 +245,70 @@
         "verified": "2026-11-11"
       }
     ]
+  },
+  {
+    "id": "god-still-speaks",
+    "number": 7,
+    "topic": "God’s voice",
+    "claim": "You don’t believe God still speaks to us.",
+    "title": "God speaks through his living Word",
+    "quote": "Does this mean God has stopped speaking? Certainly not, but He speaks today through His Word.",
+    "author": "John MacArthur",
+    "reference": "False Prophets and Lying Wonders, concluding paragraph",
+    "url": "https://www.gty.org/blogs/B100111/false-prophets-and-lying-wonders",
+    "edition_label": "Source",
+    "edition": "Grace to You, January 11, 2010; article B100111",
+    "response": "MacArthur explicitly denies that God has stopped speaking. He identifies Scripture as God’s present speech to his people. Reading, hearing, and faithfully preaching that Word are therefore occasions to hear God address us, rather than merely to learn what he once said to someone else.",
+    "context": "Alvarez’s article contrasts atheists, deists, and cessationists using deliberately broad descriptions. Later she focuses on the most strident cessationists and on claims of God speaking personally. MacArthur really does reject fresh messages beyond Scripture; his affirmation should not be used to suggest that he accepts contemporary prophecy. The distinction is between the Spirit speaking through and applying the written Word and receiving additional revealed words. Cessationists differ about impressions and how to describe providential guidance. This entry concerns present divine speech; the separate prophecy entry concerns the continuation of revelatory gifts.",
+    "verified": "2026-11-11",
+    "criticism": {
+      "author": "Carla Alvarez",
+      "quote": "There is a God and he came to save us, but he doesn’t bother with us anymore. He doesn’t speak to us.",
+      "url": "https://raisedtowalk.org/the-walk/atheists-cessationists-common/",
+      "reference": "Atheists, Cessationists, and What They Have in Common, comparison beginning “Cessationists”",
+      "edition": "Raised to Walk, January 5, 2017",
+      "kind": "A broad description that needs qualification",
+      "context": "Alvarez puts this sentence in her description of what cessationists believe; it is not her own denial that God speaks. The surrounding article argues for God’s personal involvement and later singles out the most strident cessationists. Her independent article is one published example of the accusation, not a statement representing every continuationist.",
+      "verified": "2026-11-11"
+    },
+    "supporting_quotes": [
+      {
+        "author": "R. Fowler White",
+        "quote": "In the Bible the church hears God’s true voice;",
+        "url": "https://www.the-highway.com/God_Speak.html",
+        "reference": "Does God Speak Today Apart from the Bible?, concluding paragraph",
+        "edition": "Chapter 4 in The Coming Evangelical Crisis, edited by John H. Armstrong (Moody Press, 1996); authorized reproduction at The Highway",
+        "context": "White affirms that the Spirit presently speaks in Scripture and distinguishes illumination, leading, and conviction from new revelation. He disputes the claim that believers should expect additional revealed words outside Scripture.",
+        "verified": "2026-11-11"
+      }
+    ],
+    "confessions": [
+      {
+        "quote": "the Holy Spirit speaking in the Scripture.",
+        "reference": "Westminster Confession of Faith 1.10",
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Historic English text as published by the Orthodox Presbyterian Church",
+        "context": "The paragraph identifies the supreme judge of religious controversies. Its present description of the Spirit speaking in Scripture supports the distinction between a completed written revelation and God’s continuing address through it.",
+        "verified": "2026-11-11"
+      },
+      {
+        "quote": "The Spirit of God maketh the reading, but especially the preaching of the word, an effectual means",
+        "reference": "Westminster Larger Catechism, Q. 155",
+        "url": "https://www.opc.org/lc.html",
+        "edition": "Historic English text as published by the Orthodox Presbyterian Church",
+        "context": "The answer goes on to describe enlightening, conviction, conversion, conformity to Christ, holiness, and comfort. It affirms the Spirit’s active use of the Word in hearers today, rather than treating Scripture as a dead record.",
+        "verified": "2026-11-11"
+      }
+    ],
+    "scriptures": [
+      {
+        "reference": "Hebrews 3:7–8 · “the Holy Ghost saith” in the words of a psalm",
+        "url": "https://www.biblegateway.com/passage/?search=Hebrews+3%3A7-8&version=KJV"
+      },
+      {
+        "reference": "2 Timothy 3:15–17 · Scripture equips God’s people",
+        "url": "https://www.biblegateway.com/passage/?search=2+Timothy+3%3A15-17&version=KJV"
+      }
+    ]
   }
 ]

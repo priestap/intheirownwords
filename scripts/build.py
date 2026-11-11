@@ -18,7 +18,7 @@ def disclosure(label, content, classes='', adaptive=False):
 
 COLLECTIONS = [
     ('quotes.json', 'index.template.html', 'index.html', 'Calvin & Reformed'),
-    ('cessationists.json', 'cessationists.template.html', 'cessationists.html', 'Cessationists'),
+    ('cessationists.json', 'cessationists.template.html', 'cessationists.html', 'Cessationism'),
     ('christs-return.json', 'christs-return.template.html', 'christs-return.html', 'Christ’s Return & His People'),
 ]
 
