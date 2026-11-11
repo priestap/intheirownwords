@@ -1,4 +1,12 @@
 'use strict';
+const compactReading = matchMedia('(max-width: 620px)');
+function setReadingDisclosures() {
+  document.querySelectorAll('[data-mobile-collapse]').forEach(details => {
+    details.open = !compactReading.matches;
+  });
+}
+setReadingDisclosures();
+compactReading.addEventListener('change', setReadingDisclosures);
 const entries = [...document.querySelectorAll('.entry')];
 const search = document.querySelector('#search');
 const filters = document.querySelector('#filters');
@@ -28,6 +36,7 @@ function update() {
   document.querySelector('#empty').hidden = count !== 0;
   document.querySelector('#clear-topics').hidden = selectedTopics.size === 0;
   document.querySelector('#search-clear').hidden = search.value.length === 0;
+  document.querySelector('#filter-count').textContent = selectedTopics.size ? ` · ${selectedTopics.size} selected` : '';
 }
 function reset() { selectedTopics.clear(); search.value = ''; update(); }
 search.addEventListener('input', update);
@@ -43,6 +52,7 @@ document.querySelector('#search-clear').addEventListener('click', () => {
 });
 document.querySelector('#clear-search').addEventListener('click', () => { reset(); search.focus(); });
 document.querySelector('.tools').hidden = false; filters.hidden = false;
+document.querySelector('#topic-disclosure').hidden = false;
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !event.ctrlKey && !event.metaKey && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) { event.preventDefault(); search.focus(); }
 });
@@ -53,8 +63,8 @@ document.querySelectorAll('[data-copy]').forEach(button => {
   button.addEventListener('click', async () => {
     const entry = document.getElementById(button.dataset.copy);
     const quotation = entry.querySelector('.quote-side > blockquote').textContent;
-    const citation = entry.querySelector('.citation').innerText;
-    const source = entry.querySelector('.citation a').href;
+    const citation = `${entry.querySelector('.lead-author').textContent} · ${entry.querySelector('.source-citation').textContent}`;
+    const source = entry.querySelector('.source-citation a').href;
     try { await navigator.clipboard.writeText(`${quotation}\n— ${citation}\n${source}`); notify('Quotation and source copied.'); }
     catch { notify('Copy unavailable. Select the quotation and citation to copy them.'); }
   });
@@ -63,7 +73,7 @@ function revealHash() {
   let id;
   try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
   const entry = document.getElementById(id);
-  if (entry?.classList.contains('entry')) { reset(); entry.querySelector('details').open = true; entry.scrollIntoView({ block: 'start' }); }
+  if (entry?.classList.contains('entry')) { reset(); entry.querySelector('.entry-context').open = true; entry.scrollIntoView({ block: 'start' }); }
 }
 window.addEventListener('hashchange', revealHash);
 revealHash();
