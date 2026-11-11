@@ -27,7 +27,9 @@ for q in quotes:
     assert urlparse(q['url']).scheme=='https'
     assert q['quote'] in (root/'index.html').read_text()
 confessions=[c for q in quotes for c in q.get('confessions',[])]
-assert len(confessions)==23, 'Expected 23 confessional excerpts'
+assert len(confessions)==32, 'Expected 32 confessional excerpts'
+helvetic_excerpts=[c for c in confessions if c['reference'].startswith('Second Helvetic Confession (1566)')]
+assert len(helvetic_excerpts)==9, 'Expected nine Second Helvetic excerpts'
 baptist_excerpts=[c for c in confessions if c['reference'].startswith('Second London Baptist Confession (1689)')]
 assert len(baptist_excerpts)==8, 'Expected eight 1689 excerpts'
 for conf in confessions:
@@ -36,4 +38,4 @@ for conf in confessions:
     assert escape(conf['quote']) in (root/'index.html').read_text(), 'Missing confession excerpt'
     assert escape(conf['reference']) in (root/'index.html').read_text(), 'Missing confession reference'
 assert '{{ENTRIES}}' not in (root/'index.html').read_text()
-print(f'PASS: {len(quotes)} cited entries, 23 confessional excerpts, unique IDs, internal links, and local assets.')
+print(f'PASS: {len(quotes)} cited entries, 32 confessional excerpts, unique IDs, internal links, and local assets.')

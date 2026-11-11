@@ -10,3 +10,5 @@ Historical quotations are not original project content and are not relicensed by
 Source hosts retain their own site material and marks. Linking to a source does not imply affiliation or endorsement. The Second London Baptist Confession (1689) excerpts follow the English text hosted by Reformed Baptist Seminary and reproduce only the historic confession, not the host’s introductions or annotations.
 
 The software is separately licensed under the MIT License in LICENSE.
+
+The Second Helvetic Confession (1566) excerpts reproduce the historic English version in the appendix to Philip Schaff’s *The Creeds of Christendom*, Volume III, as transcribed by CCEL. This nineteenth-century English version is public domain; it is not a modern translation.

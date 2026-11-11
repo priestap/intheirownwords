@@ -1,6 +1,6 @@
 # In Their Own Words
 
-A free static reading library pairing 13 editorial summaries of claims about Calvinism with verified excerpts from John Calvin, contextual commentary, and 23 confessional excerpts from the Westminster Confession, Canons of Dort, Heidelberg Catechism, Belgic Confession, and Second London Baptist Confession (1689).
+A free static reading library pairing 13 editorial summaries of claims about Calvinism with verified excerpts from John Calvin, contextual commentary, and 32 confessional excerpts from the Westminster Confession, Canons of Dort, Heidelberg Catechism, Belgic Confession, Second London Baptist Confession (1689), and Second Helvetic Confession (1566).
 
 Plain HTML, CSS, and JavaScript. No dependencies, account, tracking, external fonts, or build service. The full collection and source citations remain readable without JavaScript. All paths work on GitHub project Pages as well as a custom domain.
 
@@ -51,3 +51,5 @@ Semantic headings and landmarks, a skip link, keyboard-operable native disclosur
 ## Reuse
 
 Code is MIT licensed. Original editorial text is CC BY 4.0. Historic quotations remain subject to their own public-domain status; see CONTENT-LICENSE.md. No endorsement by Calvin’s source hosts or any denomination is implied.
+
+Nine Second Helvetic Confession excerpts were verified against the CCEL transcription of the English version in Philip Schaff’s *The Creeds of Christendom*, Volume III, Appendix, on November 11, 2026. Chapter references use the source’s Roman numerals. The footer’s “My confession of faith” links to the site creator’s personal statement, independently of the historical source collection.
