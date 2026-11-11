@@ -1,6 +1,7 @@
 """Check static integrity; quotation accuracy requires reviewing the sources."""
 import json
 from html.parser import HTMLParser
+from html import escape
 from pathlib import Path
 from urllib.parse import urlparse
 root=Path(__file__).resolve().parent.parent
@@ -25,5 +26,14 @@ for q in quotes:
     assert all(q[k] for k in ['quote','reference','translation','response','context','verified'])
     assert urlparse(q['url']).scheme=='https'
     assert q['quote'] in (root/'index.html').read_text()
+confessions=[c for q in quotes for c in q.get('confessions',[])]
+assert len(confessions)==23, 'Expected 23 confessional excerpts'
+baptist_excerpts=[c for c in confessions if c['reference'].startswith('Second London Baptist Confession (1689)')]
+assert len(baptist_excerpts)==8, 'Expected eight 1689 excerpts'
+for conf in confessions:
+    assert all(conf.get(k) for k in ['quote','reference','url'])
+    assert urlparse(conf['url']).scheme=='https'
+    assert escape(conf['quote']) in (root/'index.html').read_text(), 'Missing confession excerpt'
+    assert escape(conf['reference']) in (root/'index.html').read_text(), 'Missing confession reference'
 assert '{{ENTRIES}}' not in (root/'index.html').read_text()
-print(f'PASS: {len(quotes)} cited entries, unique IDs, internal links, and local assets.')
+print(f'PASS: {len(quotes)} cited entries, 23 confessional excerpts, unique IDs, internal links, and local assets.')

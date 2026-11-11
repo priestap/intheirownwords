@@ -1,6 +1,6 @@
 # In Their Own Words
 
-A free static reading library pairing 13 editorial summaries of claims about Calvinism with verified excerpts from John Calvin, contextual commentary, and selected passages from the Westminster Confession.
+A free static reading library pairing 13 editorial summaries of claims about Calvinism with verified excerpts from John Calvin, contextual commentary, and 23 confessional excerpts from the Westminster Confession, Canons of Dort, Heidelberg Catechism, Belgic Confession, and Second London Baptist Confession (1689).
 
 Plain HTML, CSS, and JavaScript. No dependencies, account, tracking, external fonts, or build service. The full collection and source citations remain readable without JavaScript. All paths work on GitHub project Pages as well as a custom domain.
 
@@ -42,7 +42,7 @@ Claim headings are editorial summaries, not quotations from named critics. The f
 
 The source text establishes what a writer said, not necessarily the truth or consistency of the writer’s theology. Context notes preserve qualifications relevant to a fair reading. Do not expand the site by adding plausible-sounding quotations from memory or AI output: inspect the actual source and document the reference first.
 
-The initial collection was checked against the linked CCEL transcriptions and the Orthodox Presbyterian Church’s confession text on November 11, 2026. Links point to chapters, complete commentary transcriptions, or the full confession; use the displayed section/verse reference to locate the passage. Transcriptions can contain errors: compare historical scans when a textual question arises.
+The initial collection was checked against the linked CCEL transcriptions, the Orthodox Presbyterian Church’s confession text, and the historic confessional texts published by the Free Reformed Churches of North America on November 11, 2026. Eight excerpts from the Second London Baptist Confession (1689) were also checked against Reformed Baptist Seminary’s English text on that date. Links point to chapters, complete commentary transcriptions, or the full confession; use the displayed section/verse reference to locate the passage. Transcriptions can contain errors: compare historical scans when a textual question arises.
 
 ## Accessibility and privacy
 
