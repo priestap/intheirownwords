@@ -12,3 +12,5 @@ Source hosts retain their own site material and marks. Linking to a source does 
 The software is separately licensed under the MIT License in LICENSE.
 
 The Second Helvetic Confession (1566) excerpts reproduce the historic English version in the appendix to Philip Schaff’s *The Creeds of Christendom*, Volume III, as transcribed by CCEL. This nineteenth-century English version is public domain; it is not a modern translation.
+
+Modern quotations from cessationist writers and their critics remain copyrighted by their respective rights holders and are not offered under the project’s CC BY license. This collection uses brief, attributed excerpts for commentary and criticism, with links to the full sources. Preserve author, publication, reference, and source URL when citing them; further reuse requires your own assessment of the applicable rights.
