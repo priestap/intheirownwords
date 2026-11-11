@@ -111,3 +111,31 @@ largerText.addEventListener('click', () => setReadingSize(readingSize + 10));
 resetText.addEventListener('click', () => setReadingSize(100));
 setReadingSize(readingSize, false);
 document.querySelector('#reading-controls').hidden = false;
+
+const siteHeader = document.querySelector('.site-header');
+const menuToggle = document.querySelector('#menu-toggle');
+const siteNavigation = document.querySelector('#site-navigation');
+const mobileNavigation = matchMedia('(max-width: 620px)');
+function setMenuOpen(open, returnFocus = false) {
+  siteHeader.classList.toggle('menu-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  if (open) siteNavigation.querySelector('a')?.focus();
+  else if (returnFocus) menuToggle.focus();
+}
+siteHeader.classList.add('nav-ready');
+menuToggle.hidden = false;
+menuToggle.addEventListener('click', () => setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true'));
+siteNavigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false, true);
+  }
+});
+document.addEventListener('click', event => {
+  if (!siteHeader.contains(event.target)) setMenuOpen(false);
+});
+siteHeader.addEventListener('focusout', event => {
+  if (!siteHeader.contains(event.relatedTarget)) setMenuOpen(false);
+});
+mobileNavigation.addEventListener('change', () => setMenuOpen(false));
