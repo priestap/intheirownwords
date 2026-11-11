@@ -1,6 +1,6 @@
 # In Their Own Words
 
-Two linked primary-source collections: **Calvin & Reformed** (`index.html`) and **Cessationists** (`cessationists.html`). Each collection has its own URL, introduction, sources, search, and topic filters. Collection navigation and all quotations work without JavaScript.
+Three linked primary-source collections: **Calvin & Reformed** (`index.html`), **Cessationists** (`cessationists.html`), and **Christ’s Return & His People** (`christs-return.html`). Each collection has its own URL, introduction, sources, search, and topic filters. Collection navigation and all quotations work without JavaScript.
 
 The Calvin collection pairs 13 editorial summaries of claims about Calvinism with verified excerpts from John Calvin, contextual commentary, and 32 confessional excerpts from the Westminster Confession, Canons of Dort, Heidelberg Catechism, Belgic Confession, Second London Baptist Confession (1689), and Second Helvetic Confession (1566).
 
@@ -23,7 +23,8 @@ No repository has been created or published by this project setup.
 
 - `quotes.json`: entries, exact excerpts, citation references, translation metadata, context, and source URLs.
 - `cessationists.json`: six verified modern excerpts from Thomas R. Schreiner, Sinclair B. Ferguson, and Richard B. Gaffin, Jr., with source editions and author-specific context.
-- `index.template.html` and `cessationists.template.html`: page structure and introductory copy for each collection.
+- `christs-return.json`: six sourced entries on Christ’s return, Israel, the kingdom, prophecy, Christian hope, and spiritual warfare, with supporting voices, Scripture references, confessional excerpts, and separate personal statements.
+- `index.template.html`, `cessationists.template.html`, and `christs-return.template.html`: page structure and introductory copy for each collection; the builder renders shared collection navigation.
 - `style.css`: responsive layout, light/dark palettes, focus states, reduced motion, and print styles.
 - `app.js`: search, topic filters, copy citation, deep links, and saved theme preference.
 
@@ -35,13 +36,13 @@ python3 scripts/check.py
 node --check app.js
 ```
 
-Commit the generated `index.html` and `cessationists.html` too, so the repository also works as a branch-served static site. GitHub Actions rebuilds it automatically. Python and Node are development tools only; the deployed site needs neither.
+Commit all three generated HTML pages too, so the repository also works as a branch-served static site. GitHub Actions rebuilds it automatically. Python and Node are development tools only; the deployed site needs neither.
 
 ## Editorial policy
 
 Every displayed quotation has an author or confessional attribution, precise location, and a link to the source text. Historical English translations are identified. Excerpt boundaries can omit punctuation surrounding the quoted phrase. Do not silently modernize quotations.
 
-Claim headings are editorial summaries, not quotations from named critics. The founding draft’s modern critics’ quotations are not reproduced because this first version does not include a completed primary-source audit of those attributions. This release also does not reproduce every quotation in that draft.
+In the Calvin collection, claim headings are editorial summaries, not quotations from named critics. The founding draft’s modern critics’ quotations are not reproduced because this first version does not include a completed primary-source audit of those attributions. This release also does not reproduce every quotation in that draft.
 
 The source text establishes what a writer said, not necessarily the truth or consistency of the writer’s theology. Context notes preserve qualifications relevant to a fair reading. Do not expand the site by adding plausible-sounding quotations from memory or AI output: inspect the actual source and document the reference first.
 
@@ -68,3 +69,13 @@ Three supporting excerpts follow the lead quotations for miracles, healing, and 
 ## Mobile reading
 
 At widths up to 620px, citations and context, supporting voices, collection background, the reading note, and topic filters start collapsed. Lead quotations and author names stay visible; confessional witness has a separate, labeled disclosure. Desktop expands the adaptive sections. Resizing across the breakpoint resets those defaults, while user toggles persist within a size range. Without JavaScript the adaptive details remain open so all content stays readable. Search still includes collapsed content. Citation copying uses the response author and source, even while citation details are closed.
+
+## Election and evangelism in history
+
+The Calvin collection’s evangelism entry includes seven sourced historical examples: Augustine, Calvin, Whitefield, Carey, Spurgeon, Lloyd-Jones, and Piper. The expandable list separates evidence of belief from preaching, missionary service, and missionary advocacy. Augustine is explicitly treated as an ancient predecessor rather than called a Calvinist. Each profile includes qualifications, precise source references, and a verification date; historical counterexamples are not treated as proof of the doctrine or a measure of every adherent’s motives. Profiles live in the `historical_witnesses` field of `quotes.json` and are included in the existing download.
+
+## Christ’s Return & His People
+
+Six entries address common accusations about the rapture, replacement theology, Christ’s kingdom, spiritualizing Scripture, defeatism, and whether God is finished with the Jews. Exact published criticisms are paired with primary responses and nine confessional excerpts. Context distinguishes misdescription from substantive exegetical disagreement, including the critics’ qualifications. Modern source excerpts remain limited to 25 words per source. Personal statements are identified separately.
+
+The creator’s personal confession guides the scope and appears in a separately labeled disclosure in each entry. It is not treated as a historical standard, and its permission of liberty among millennial views is retained. The collection distinguishes affirming a gathering from its chronology, and fulfillment in Christ from a claim that Jews receive only curses. Real disagreements over Israel’s future, land promises, and particular prophecies remain explicit.

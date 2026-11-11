@@ -16,6 +16,24 @@ def disclosure(label, content, classes='', adaptive=False):
     return f'<details class="{classes}"{state}><summary>{e(label)} <span aria-hidden="true">+</span></summary>{content}</details>'
 
 
+COLLECTIONS = [
+    ('quotes.json', 'index.template.html', 'index.html', 'Calvin & Reformed'),
+    ('cessationists.json', 'cessationists.template.html', 'cessationists.html', 'Cessationists'),
+    ('christs-return.json', 'christs-return.template.html', 'christs-return.html', 'Christ’s Return & His People'),
+]
+
+
+def collection_navigation(output_file):
+    links = []
+    for data_file, _, page_file, label in COLLECTIONS:
+        count = len(json.loads((root / data_file).read_text()))
+        href = './#library' if page_file == 'index.html' else f'./{page_file}#library'
+        active = ' aria-current="page"' if page_file == output_file else ''
+        state = '<span class="collection-state">Current collection</span>' if active else '<span class="collection-state">View collection</span>'
+        links.append(f'<a href="{href}"{active}><span class="collection-name">{e(label)}</span><span class="collection-count">{count} entries</span>{state}</a>')
+    return '<p class="collection-chooser-label">Choose a collection</p><nav class="collection-tabs" aria-label="Choose a collection">' + ''.join(links) + '</nav>'
+
+
 def build(data_file, template_file, output_file):
     data = json.loads((root / data_file).read_text())
     entries = []
@@ -32,24 +50,42 @@ def build(data_file, template_file, output_file):
         voices = ''
         for voice in supporting:
             voices += f'<div class="witness supporting-voice"><blockquote>“{e(voice["quote"])}”</blockquote><p class="citation"><strong>{e(voice["author"])}</strong> · {source_link(voice)}<span>{e(voice["edition"])}</span></p><p class="witness-context">{e(voice["context"])}</p></div>'
-        supporting_html = disclosure(f'More cessationist voices · {len(supporting)}', f'<div class="supporting-voices">{voices}</div>', 'supporting-disclosure', adaptive=True) if supporting else ''
+        supporting_html = disclosure(f'{q.get("supporting_label", "More cessationist voices")} · {len(supporting)}', f'<div class="supporting-voices">{voices}</div>', 'supporting-disclosure', adaptive=True) if supporting else ''
+
+        history = q.get('historical_witnesses')
+        history_html = ''
+        if history:
+            profiles = ''
+            for person in history['people']:
+                links = ''.join(f'<li><span>{e(source["kind"])}</span>{source_link(source)}</li>' for source in person['sources'])
+                profiles += f'''<li class="historical-person"><p class="eyebrow">{e(person['era'])}</p><h4>{e(person['name'])}</h4><p><strong>Belief.</strong> {e(person['belief'])}</p><p><strong>In practice.</strong> {e(person['ministry'])}</p><p class="historical-qualification">{e(person['qualification'])}</p><ul class="historical-sources" aria-label="Sources for {e(person['name'])}">{links}</ul></li>'''
+            history_body = f'<div class="context historical-witnesses"><p>{e(history["intro"])}</p><p class="historical-scope">{e(history["scope"])}</p><ol class="historical-people">{profiles}</ol><p class="history-verification">Historical summaries and source references checked November 11, 2026. Belief, ministry, and qualifications are editorial summaries, not attributed quotations.</p></div>'
+            history_html = disclosure(f'{history["title"]} · {len(history["people"])} examples', history_body, 'historical-disclosure')
 
         criticism = q.get('criticism')
         if criticism:
             critic_context = f'<p class="citation">{source_link(criticism)}<span>{e(criticism["edition"])}</span></p><p class="criticism-kind">{e(criticism["kind"])}</p><p class="critic-context">{e(criticism["context"])}</p>'
             critic_details = disclosure('Citation & context', critic_context, 'critic-details', adaptive=True)
-            claim_side = f'<h3 class="mobile-entry-heading">{e(q["title"])}</h3><p class="eyebrow">THE CRITICISM</p><blockquote class="critic-quote"><p>“{e(criticism["quote"])}”</p></blockquote><p class="critic-author">{e(criticism["author"])}</p>{critic_details}'
+            claim_side = f'<h3 class="mobile-entry-heading">{e(q["title"])}</h3><p class="eyebrow">THE CRITICISM</p>{f'<p class="common-claim"><strong>{e(q["claim"])}</strong></p><p class="claim-note">Common claim · editorial summary</p>' if data_file == 'christs-return.json' else ''}<blockquote class="critic-quote"><p>“{e(criticism["quote"])}”</p></blockquote><p class="critic-author">{e(criticism["author"])}</p>{critic_details}'
         else:
             claim_side = f'<p class="eyebrow">THE COMMON CLAIM</p><h3>{e(q["claim"])}</h3><p class="claim-note">Editorial summary · see our approach</p>'
 
         edition = f'{e(q.get("edition_label", "Translation"))}: {e(q.get("edition", q.get("translation", "")))}'
         source_citation = f'<p class="citation source-citation">{source_link(q)}<span>{edition}</span></p>'
         context = f'<div class="context"><h4>{e(q["title"])}</h4><p>{e(q["response"])}</p><p><strong>Read in context.</strong> {e(q["context"])}</p></div>'
+        scripture_links = ''.join(f'<li>{source_link(passage)}</li>' for passage in q.get('scriptures', []))
+        if scripture_links:
+            context += f'<div class="context scripture-links"><h4>Scripture to examine</h4><ul>{scripture_links}</ul></div>'
+        creator = q.get('creator_statement')
+        creator_html = ''
+        if creator:
+            creator_body = f'<div class="context"><p class="eyebrow">PERSONAL STATEMENT · SITE CREATOR</p><blockquote>“{e(creator["quote"])}”</blockquote><p class="citation">{source_link(creator)}</p><p>{e(creator["context"])}</p></div>'
+            creator_html = disclosure('The creator’s position', creator_body, 'creator-disclosure')
         source_details = disclosure('Citation & context', source_citation + context, 'entry-context', adaptive=True)
-        entries.append(f'''<article class="entry" id="{q['id']}" data-topic="{e(q['topic'])}"><div class="claim-side"><span class="entry-number">{q['number']:02d}</span><span class="topic">{e(q['topic'])}</span>{claim_side}</div><div class="quote-side"><p class="eyebrow">IN HIS OWN WORDS</p><blockquote>“{e(q['quote'])}”</blockquote><p class="lead-author">{e(q['author'])}</p>{source_details}{supporting_html}{conf_html}<div class="entry-actions"><a href="{e(q['url'])}">Read the source {ARROW}</a><button type="button" data-copy="{q['id']}" hidden>Copy citation</button><a href="#{q['id']}" class="permalink" aria-label="Permanent link: {e(q['title'])}"># Share entry</a></div></div></article>''')
-    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)))
+        entries.append(f'''<article class="entry" id="{q['id']}" data-topic="{e(q['topic'])}"><div class="claim-side"><span class="entry-number">{q['number']:02d}</span><span class="topic">{e(q['topic'])}</span>{claim_side}</div><div class="quote-side"><p class="eyebrow">{e(q.get("quote_label", "IN HIS OWN WORDS"))}</p><blockquote>“{e(q['quote'])}”</blockquote><p class="lead-author">{e(q['author'])}</p>{source_details}{supporting_html}{conf_html}{creator_html}{history_html}<div class="entry-actions"><a href="{e(q['url'])}">Read the source {ARROW}</a><button type="button" data-copy="{q['id']}" hidden>Copy citation</button><a href="#{q['id']}" class="permalink" aria-label="Permanent link: {e(q['title'])}"># Share entry</a></div></div></article>''')
+    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)).replace('{{COLLECTION_NAV}}', collection_navigation(output_file)))
     print(f'Built {len(data)} entries into {output_file}')
 
 
-build('quotes.json', 'index.template.html', 'index.html')
-build('cessationists.json', 'cessationists.template.html', 'cessationists.html')
+for data_file, template_file, output_file, _ in COLLECTIONS:
+    build(data_file, template_file, output_file)

@@ -229,7 +229,159 @@
         "context": "The passage affirms inward illumination and drawing by God while insisting on outward preaching. It appeals to Cornelius being sent to Peter and to the opening of Lydia’s heart.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "historical_witnesses": {
+      "title": "Election & evangelism in history",
+      "intro": "From the ancient church to contemporary ministry, these believers joined conviction about God’s sovereign grace with preaching, missionary service, or the sending of preachers. The sources distinguish what each believed from what each did.",
+      "scope": "These examples answer the claim that belief in election necessarily extinguishes evangelistic zeal. They do not establish that every believer is equally zealous, that all these figures agreed, or that historical examples alone prove the doctrine true. Augustine is an ancient predecessor, not a member of the later Reformed tradition.",
+      "people": [
+        {
+          "name": "Augustine of Hippo",
+          "era": "Ancient church · 4th–5th centuries",
+          "belief": "In his mature teaching, Augustine held that the beginning of faith and perseverance are gifts God gives according to his gracious will. He explicitly argued that preaching predestination must not hinder preaching faith.",
+          "ministry": "His surviving sermons put exhortation into practice. Sermon 81 calls hearers to believe in the crucified Christ while explaining faith as the Father’s gift.",
+          "qualification": "An ancient predecessor, not a Calvinist: Augustine lived long before the Reformation, and his sacramental theology and other teachings differ from later Reformed theology.",
+          "sources": [
+            {
+              "reference": "On the Gift of Perseverance, chapters 33–36 (hosted as On the Predestination of the Saints, Book II); NPNF English translation",
+              "url": "https://www.newadvent.org/fathers/15122.htm",
+              "kind": "Belief: Augustine’s own work"
+            },
+            {
+              "reference": "Sermon 81 on the New Testament (Benedictine Sermon 131), sections 2–3; NPNF English translation",
+              "url": "https://www.newadvent.org/fathers/160381.htm",
+              "kind": "Preaching: surviving sermon"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "John Calvin",
+          "era": "Reformation · 16th century",
+          "belief": "Institutes 3.21.5–7 locates election in God’s eternal counsel, rather than making it depend on foreseen human merit.",
+          "ministry": "Alongside his own preaching and writing, Calvin encouraged French Reformed congregations and sent pastors trained in Geneva to serve them.",
+          "qualification": "This is evidence of active support for spreading Reformed preaching in Europe; it should not be confused with a claim that Calvin personally traveled as an overseas missionary.",
+          "sources": [
+            {
+              "reference": "Institutes of the Christian Religion 3.21.5–7; Henry Beveridge translation",
+              "url": "https://www.ccel.org/ccel/calvin/institutes.v.xxii.html",
+              "kind": "Belief: Calvin’s own work"
+            },
+            {
+              "reference": "Musée protestant, Jean Calvin (1509–1564), sections on preaching and France",
+              "url": "https://museeprotestant.org/en/notice/jean-calvin-1509-1564/",
+              "kind": "Ministry: historical biography"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "George Whitefield",
+          "era": "Evangelical awakening · 18th century",
+          "belief": "In his 1740 letter to John Wesley, Whitefield defended election and argued that God appoints preaching as a means of bringing people to salvation.",
+          "ministry": "He repeatedly preached outdoors to people beyond ordinary church congregations, carrying his evangelical preaching across Britain and the American colonies.",
+          "qualification": "Whitefield was a Calvinistic Anglican, not a Presbyterian or Baptist. These examples identify a shared conviction about election rather than agreement on every doctrine.",
+          "sources": [
+            {
+              "reference": "Letter to Wesley on Election, section 1, p. 8; letter dated December 24, 1740",
+              "url": "https://www.chapellibrary.org/pdf/books/wltw.pdf#page=9",
+              "kind": "Belief: Whitefield’s own letter"
+            },
+            {
+              "reference": "Banner of Truth, George Whitefield, biographical account of his field preaching",
+              "url": "https://banneroftruth.org/uk/about/banner-authors/george-whitefield/",
+              "kind": "Ministry: historical biography"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "William Carey",
+          "era": "Missionary movement · 18th–19th centuries",
+          "belief": "Carey belonged to the Particular Baptist tradition. George Smith’s historical biography explicitly identifies him as a Calvinist; this establishes his theological setting without supplying a detailed personal exposition of election.",
+          "ministry": "His 1792 Enquiry argued for Christians’ obligation to use means to spread the gospel. He helped establish the Baptist Missionary Society and subsequently served in India.",
+          "qualification": "The evidence here combines historical identification with missionary advocacy and service. It should not be presented as a verbatim statement of Carey’s precise formulation of election.",
+          "sources": [
+            {
+              "reference": "George Smith, The Life of William Carey, D.D. (1885), chapter I, Carey’s College",
+              "url": "https://careycenter.wmcarey.edu/gsmith/i.htm",
+              "kind": "Belief: historical biography"
+            },
+            {
+              "reference": "William Carey University’s Carey Center, An Enquiry (1792), overview and original text",
+              "url": "https://careycenter.wmcarey.edu/enquiry/enquiry.html",
+              "kind": "Missionary advocacy: Carey’s publication"
+            },
+            {
+              "reference": "William Carey University’s Carey Center, Description of the Center and Carey’s work in India",
+              "url": "https://careycenter.wmcarey.edu/description.htm",
+              "kind": "Ministry: historical record"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "Charles Haddon Spurgeon",
+          "era": "Victorian evangelicalism · 19th century",
+          "belief": "His sermon Election, preached September 2, 1855, openly defends God’s electing choice in salvation.",
+          "ministry": "In A Gospel Sermon to Outsiders, preached August 19, 1877, he deliberately addresses the unconverted at an open service and urges them to come to Christ.",
+          "qualification": "His own sermons supply evidence for both convictions and evangelistic practice, without relying on estimates of audience size or conversion totals.",
+          "sources": [
+            {
+              "reference": "Election, sermon 41–42, September 2, 1855; historic English text at CCEL",
+              "url": "https://ccel.org/ccel/spurgeon/sermons01/sermons01.xxxix.html",
+              "kind": "Belief: Spurgeon’s own sermon"
+            },
+            {
+              "reference": "A Gospel Sermon to Outsiders, Mark 10:49, August 19, 1877; The Spurgeon Library",
+              "url": "https://www.spurgeon.org/sermons/a-gospel-sermon-to-outsiders",
+              "kind": "Evangelism: Spurgeon’s own sermon"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "Martyn Lloyd-Jones",
+          "era": "Modern evangelicalism · 20th century",
+          "belief": "In Chosen in Him, his 1954 sermon on Ephesians 1:4, Lloyd-Jones defends God’s sovereign choice and expressly denies that election makes evangelism unnecessary.",
+          "ministry": "At Westminster Chapel, he devoted Sunday evenings to evangelistic preaching. The MLJ Trust documents the priority he placed on preparing sermons for unbelievers.",
+          "qualification": "His criticism of some evangelistic campaign methods did not amount to opposition to evangelism; the record includes his regular evangelistic preaching.",
+          "sources": [
+            {
+              "reference": "Chosen in Him, sermon 4007, November 14, 1954; recording and publisher’s summary",
+              "url": "https://www.mljtrust.org/sermon/chosen-in-him/",
+              "kind": "Belief: sermon archive"
+            },
+            {
+              "reference": "Greg Jones, Saints in the morning, sinners at night, MLJ Trust",
+              "url": "https://www.mljtrust.org/blog/saints-in-the-morning/",
+              "kind": "Ministry: archive’s historical account"
+            }
+          ],
+          "verified": "2026-11-11"
+        },
+        {
+          "name": "John Piper",
+          "era": "Contemporary example · 20th–21st centuries",
+          "belief": "His 2000 message Let the Nations Be Glad explicitly affirms unconditional election while arguing that it gives no basis for withholding the gospel from any person or people.",
+          "ministry": "In that message he urges churches to raise up missionaries for unreached peoples. His 1991 essay Unreached Peoples develops the case for planting churches where the gospel has not reached.",
+          "qualification": "The cited evidence demonstrates sustained missionary teaching and mobilization, not a claim that Piper himself served as a career overseas missionary.",
+          "sources": [
+            {
+              "reference": "Let the Nations Be Glad, June 15, 2000, Doctrines of Grace and Unconditional Election sections",
+              "url": "https://www.desiringgod.org/messages/let-the-nations-be-glad--2",
+              "kind": "Belief and missionary exhortation: Piper’s own message"
+            },
+            {
+              "reference": "Unreached Peoples: The Unique and Primary Goal of Missions, January 1, 1991",
+              "url": "https://www.desiringgod.org/articles/unreached-peoples",
+              "kind": "Missionary advocacy: Piper’s own essay"
+            }
+          ],
+          "verified": "2026-11-11"
+        }
+      ]
+    }
   },
   {
     "id": "invitation",

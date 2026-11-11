@@ -13,7 +13,7 @@ class Page(HTMLParser):
         if 'id' in a: self.ids.append(a['id'])
         if tag=='article': self.articles+=1
         if tag=='a': self.links.append(a.get('href',''))
-collections=[('index.html','quotes.json',13),('cessationists.html','cessationists.json',6)]
+collections=[('index.html','quotes.json',13),('cessationists.html','cessationists.json',6),('christs-return.html','christs-return.json',6)]
 for page_file,data_file,expected in collections:
     html=(root/page_file).read_text()
     page=Page(); page.feed(html)
@@ -24,7 +24,9 @@ for page_file,data_file,expected in collections:
     assert [q['number'] for q in quotes]==list(range(1,expected+1))
     assert '{{ENTRIES}}' not in html
     assert html.count('aria-current="page"')==1
-    assert './#library' in page.links and './cessationists.html#library' in page.links
+    assert all(link in page.links for link in ['./#library','./cessationists.html#library','./christs-return.html#library'])
+    assert '{{COLLECTION_NAV}}' not in html
+    assert not any(arrow in html for arrow in ['↗','↓','↑']), 'Use SVG arrows for iOS consistency'
     for link in page.links:
         if link.startswith('#'):
             assert link[1:] in page.ids, f'Missing anchor {link}'
@@ -47,6 +49,20 @@ for page_file,data_file,expected in collections:
         assert escape(q['reference']) in html
     print(f'PASS: {page_file}: {expected} cited entries, unique IDs, collection navigation, internal links, and local assets.')
 quotes=json.loads((root/'quotes.json').read_text())
+history=next(q for q in quotes if q['id']=='evangelism')['historical_witnesses']
+assert all(history.get(key) for key in ['title','intro','scope','people'])
+assert len(history['people'])==7, 'Expected seven historical examples'
+assert len({person['name'] for person in history['people']})==7
+history_html=(root/'index.html').read_text()
+for person in history['people']:
+    assert all(person.get(key) for key in ['name','era','belief','ministry','qualification','sources','verified'])
+    assert len(person['sources'])>=2, 'Belief and ministry each need source evidence'
+    assert all(escape(person[key]) in history_html for key in ['name','era','belief','ministry','qualification'])
+    for source in person['sources']:
+        assert all(source.get(key) for key in ['reference','url','kind'])
+        assert urlparse(source['url']).scheme=='https'
+        assert escape(source['reference']) in history_html
+print('PASS: seven historical profiles with separate evidence of belief and ministry, qualifications, and source references.')
 confessions=[c for q in quotes for c in q.get('confessions',[])]
 assert len(confessions)==32, 'Expected 32 confessional excerpts'
 helvetic_excerpts=[c for c in confessions if c['reference'].startswith('Second Helvetic Confession (1566)')]
@@ -96,4 +112,30 @@ assert supporting_count==3, 'Expected three supporting excerpts'
 assert all(count<=25 for count in words_by_source.values()), 'Modern excerpts exceed 25 words per source'
 workflow=(root/'.github/workflows/pages.yml').read_text()
 assert 'cessationists.html' in workflow and 'cessationists.json' in workflow
-print('PASS: 32 Calvin confessional excerpts, six cessationist confessional excerpts, six attributed criticisms, three supporting excerpts, brief modern excerpts, and both collections packaged for GitHub Pages.')
+print('PASS: 32 Calvin confessional excerpts, six cessationist confessional excerpts, six attributed criticisms, three supporting excerpts, brief modern excerpts, and all three collections packaged for GitHub Pages.')
+
+hope=json.loads((root/'christs-return.json').read_text())
+hope_html=(root/'christs-return.html').read_text()
+hope_words={}
+hope_confessions=[]
+for q in hope:
+    assert q['supporting_label']=='More voices'
+    assert q['scriptures']
+    assert len(q['confessions'])>=1
+    hope_confessions.extend(q['confessions'])
+    for item in [q,q['criticism'],*q['supporting_quotes'],*([q['creator_statement']] if q.get('creator_statement') else [])]:
+        assert all(item.get(key) for key in ['quote','reference','url','context','verified'])
+        assert urlparse(item['url']).scheme=='https'
+        assert all(escape(item[key]) in hope_html for key in ['quote','reference','context'])
+        source=item['url'].split('#')[0]
+        hope_words[source]=hope_words.get(source,0)+len(item['quote'].split())
+    for passage in q['scriptures']:
+        assert urlparse(passage['url']).scheme=='https'
+        assert escape(passage['reference']) in hope_html
+for c in hope_confessions:
+    assert all(c.get(key) for key in ['quote','reference','url','edition','context','verified'])
+    assert all(escape(c[key]) in hope_html for key in ['quote','reference','context'])
+assert all(count<=25 for count in hope_words.values()), 'Hope collection modern excerpts exceed 25 words per source'
+assert 'More cessationist voices' not in hope_html
+assert 'christs-return.html' in workflow and 'christs-return.json' in workflow
+print('PASS: new collection: six criticisms, six responses, two supporting voices, nine confessional excerpts, Scripture links, and separate personal statements.')
