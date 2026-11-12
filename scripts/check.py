@@ -64,7 +64,7 @@ for person in history['people']:
         assert escape(source['reference']) in history_html
 print('PASS: seven historical profiles with separate evidence of belief and ministry, qualifications, and source references.')
 confessions=[c for q in quotes for c in q.get('confessions',[])]
-assert len(confessions)==32, 'Expected 32 confessional excerpts'
+assert len(confessions)==34, 'Expected 34 confessional excerpts'
 helvetic_excerpts=[c for c in confessions if c['reference'].startswith('Second Helvetic Confession (1566)')]
 assert len(helvetic_excerpts)==9, 'Expected nine Second Helvetic excerpts'
 baptist_excerpts=[c for c in confessions if c['reference'].startswith('Second London Baptist Confession (1689)')]
@@ -112,7 +112,7 @@ assert supporting_count==4, 'Expected four supporting excerpts'
 assert all(count<=25 for count in words_by_source.values()), 'Modern excerpts exceed 25 words per source'
 workflow=(root/'.github/workflows/pages.yml').read_text()
 assert 'cessationists.html' in workflow and 'cessationists.json' in workflow
-print('PASS: 32 Calvin confessional excerpts, eight cessationist confessional excerpts, seven attributed criticisms, four supporting excerpts, brief modern excerpts, and all three collections packaged for GitHub Pages.')
+print('PASS: 34 Calvin confessional excerpts, eight cessationist confessional excerpts, seven attributed criticisms, four supporting excerpts, brief modern excerpts, and all three collections packaged for GitHub Pages.')
 
 hope=json.loads((root/'christs-return.json').read_text())
 hope_html=(root/'christs-return.html').read_text()

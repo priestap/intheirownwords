@@ -121,3 +121,12 @@ html[data-theme=dark] .calvin-portrait{opacity:.45}
 .simple-mode .collection-chooser-label{margin-top:0}
 .simple-mode .collection-tabs{margin-top:0}
 @media(max-width:620px){.simple-mode .site-header{height:64px}.simple-mode .library{padding-top:16px}}
+
+/* Confessional sources stay visible while objections are collapsed. */
+.simple-confessions{display:none}
+.simple-mode .simple-confessions{display:block;padding:0 20px 16px 48px;color:var(--muted);font-size:calc(12px * var(--reading-scale));line-height:1.7}
+.simple-confessions p{margin:0 0 4px;font-size:10px;letter-spacing:.6px;text-transform:uppercase}
+.simple-confessions ul{display:flex;flex-wrap:wrap;gap:4px 18px;list-style:none;padding:0;margin:0}
+.simple-confessions a{color:inherit}
+@media(max-width:620px){.simple-mode .simple-confessions{padding:0 16px 14px 42px}.simple-confessions ul{display:block}.simple-confessions li+li{margin-top:4px}}
+@media print{.simple-mode .simple-confessions{display:none}}

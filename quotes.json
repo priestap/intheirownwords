@@ -795,8 +795,8 @@
     "url": "https://www.ccel.org/c/calvin/comment2/1tim.htm",
     "author": "John Calvin",
     "translation": "William Pringle (1856)",
-    "response": "The slogan assumes that “all” must mean every individual without exception. Calvin reads this passage in light of Paul’s call to pray for kings and people in authority: salvation is not confined to one nation or social rank. The question is who “all” includes in this particular passage.",
-    "context": "This is Calvin’s interpretation of 1 Timothy 2:4, not a rule that “all” can never mean every individual. His interpretation must be assessed against the passage and its context; quoting him establishes his position without settling the exegetical dispute.",
+    "response": "The slogan assumes that “all” must mean every individual without exception. Calvin reads this passage in light of Paul’s call to pray for kings and people in authority: salvation is not confined to one nation or social rank. The question is who “all” includes in this particular passage. Consider a separate example: in 1 Corinthians 15:27 Paul says “all things” are put under Christ, then explicitly excepts God, who subjected them to him. Scripture itself explains the scope of “all”; the word does not erase the qualification supplied by its context.",
+    "context": "This is Calvin’s interpretation of 1 Timothy 2:4, not a rule that “all” can never mean every individual. His interpretation must be assessed against the passage and its context; quoting him establishes his position without settling the exegetical dispute. The Corinthians example demonstrates the need to identify the scope of universal language; it does not by itself prove Calvin’s reading of 1 Timothy. The confessions below supply both a principle of interpretation and the Reformed teaching about redemption across peoples, rather than a direct rebuttal of the modern slogan.",
     "verified": "2026-11-12",
     "criticism": {
       "author": "An unnamed pastor, as recalled by R. Scott Clark",
@@ -808,6 +808,43 @@
       "context": "Clark recalls a pastor using this slogan and then argues against it. Clark is reporting the objection, not endorsing it; the pastor is unnamed. The slogan above is therefore presented as a common trope rather than attributed to a named critic or to all non-Calvinists.",
       "verified": "2026-11-12",
       "public_domain": false
-    }
+    },
+    "supporting_label": "Scripture example",
+    "supporting_quotes": [
+      {
+        "quote": "For he hath put all things under his feet. But when he saith all things are put under him, it is manifest that he is excepted, which did put all things under him.",
+        "author": "Paul the Apostle",
+        "reference": "1 Corinthians 15:27",
+        "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A27&version=KJV",
+        "edition": "King James Version (public domain)",
+        "context": "Paul explicitly excludes God from the “all things” subjected to Christ. This example is separate from Calvin’s cited discussion of 1 Timothy 2:4 and shows why the scope must be read from the passage.",
+        "verified": "2026-11-12",
+        "public_domain": true
+      }
+    ],
+    "scriptures": [
+      {
+        "reference": "1 Corinthians 15:24–28 · “all things” with an explicit exception",
+        "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A24-28&version=KJV"
+      }
+    ],
+    "confessions": [
+      {
+        "quote": "The infallible rule of interpretation of Scripture is the Scripture itself: and therefore, when there is a question about the true and full sense of any Scripture (which is not manifold, but one), it must be searched and known by other places that speak more clearly.",
+        "reference": "Westminster Confession of Faith 1.9",
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Historic English text as published by the Orthodox Presbyterian Church",
+        "context": "This states the interpretive principle: Scripture explains Scripture. It does not define “all” as always limited or settle every disputed use of the word.",
+        "verified": "2026-11-12"
+      },
+      {
+        "quote": "should effectually redeem out of every people, tribe, nation, and language, all those, and those only, who were from eternity chosen to salvation, and given to him by the Father",
+        "reference": "Canons of Dort II.8",
+        "url": "https://www.frcna.org/canons-of-dort",
+        "edition": "Historic English text as published by the Free Reformed Churches of North America",
+        "context": "The article distinguishes redemption across every people from the effectual redemption of every individual. This is a doctrinal statement about the scope of effectual redemption, not a lexical rule for every occurrence of “all.” Article II.5 also requires indiscriminate proclamation of the gospel promise and the command to repent and believe.",
+        "verified": "2026-11-12"
+      }
+    ]
   }
 ]
