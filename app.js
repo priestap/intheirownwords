@@ -8,6 +8,37 @@ function setReadingDisclosures() {
 setReadingDisclosures();
 compactReading.addEventListener('change', setReadingDisclosures);
 const entries = [...document.querySelectorAll('.entry')];
+// Simple mode keeps objections scannable and opens every source on demand.
+const simpleModeButton = document.querySelector('#simple-mode');
+let simpleMode = true;
+try { simpleMode = localStorage.getItem('simple-mode') !== 'false'; } catch {}
+const disclosureStates = new Map();
+function expandObjection(entry, expanded) {
+  entry.classList.toggle('objection-open', expanded);
+  entry.querySelector('.objection-toggle').setAttribute('aria-expanded', String(expanded));
+  if (expanded) entry.querySelectorAll('details').forEach(detail => { detail.open = true; });
+}
+function setSimpleMode(enabled) {
+  simpleMode = enabled;
+  document.body.classList.toggle('simple-mode', enabled);
+  simpleModeButton.setAttribute('aria-pressed', String(enabled));
+  entries.forEach(entry => {
+    entry.querySelector('.objection-toggle').hidden = !enabled;
+    if (enabled) {
+      entry.querySelectorAll('details').forEach(detail => disclosureStates.set(detail, detail.open));
+      expandObjection(entry, false);
+    } else {
+      entry.querySelectorAll('details').forEach(detail => { if (disclosureStates.has(detail)) detail.open = disclosureStates.get(detail); });
+    }
+  });
+  try { localStorage.setItem('simple-mode', String(enabled)); } catch {}
+}
+entries.forEach(entry => {
+  entry.querySelector('.objection-toggle').addEventListener('click', () => expandObjection(entry, !entry.classList.contains('objection-open')));
+});
+simpleModeButton.addEventListener('click', () => { setSimpleMode(!simpleMode); revealHash(); });
+document.querySelector('.view-controls').hidden = false;
+setSimpleMode(simpleMode);
 const search = document.querySelector('#search');
 const filters = document.querySelector('#filters');
 const selectedTopics = new Set();
@@ -51,8 +82,10 @@ document.querySelector('#search-clear').addEventListener('click', () => {
   update();
 });
 document.querySelector('#clear-search').addEventListener('click', () => { reset(); search.focus(); });
-document.querySelector('.tools').hidden = false; filters.hidden = false;
-document.querySelector('#topic-disclosure').hidden = false;
+document.querySelector('.tools').hidden = false;
+// Topic filters remain available for a future return.
+filters.hidden = true;
+document.querySelector('#topic-disclosure').hidden = true;
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !event.ctrlKey && !event.metaKey && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) { event.preventDefault(); search.focus(); }
 });
@@ -73,7 +106,7 @@ function revealHash() {
   let id;
   try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
   const entry = document.getElementById(id);
-  if (entry?.classList.contains('entry')) { reset(); entry.querySelector('.entry-context').open = true; entry.scrollIntoView({ block: 'start' }); }
+  if (entry?.classList.contains('entry')) { reset(); if (simpleMode) expandObjection(entry, true); entry.querySelector('.entry-context').open = true; entry.scrollIntoView({ block: 'start' }); }
 }
 window.addEventListener('hashchange', revealHash);
 revealHash();

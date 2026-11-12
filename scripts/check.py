@@ -32,7 +32,7 @@ for page_file,data_file,expected in collections:
             assert link[1:] in page.ids, f'Missing anchor {link}'
         elif link.startswith('./'):
             path,_,fragment=link.partition('#')
-            target=root/path[2:]
+            target=root/path[2:].split('?',1)[0]
             if target.is_dir(): target=target/'index.html'
             assert target.is_file(), f'Missing local file {link}'
             if fragment:

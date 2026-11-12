@@ -1,9 +1,11 @@
 """Generate the committed, JavaScript-optional GitHub Pages collections."""
 import json
+import hashlib
 from pathlib import Path
 from html import escape as e
 
 root = Path(__file__).resolve().parent.parent
+ASSET_VERSION = hashlib.sha256((root / "style.css").read_bytes() + (root / "app.js").read_bytes()).hexdigest()[:12]
 ARROW = '<svg class="ui-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>'
 
 
@@ -86,8 +88,8 @@ def build(data_file, template_file, output_file):
             creator_body = f'<div class="context"><p class="eyebrow">PERSONAL STATEMENT · SITE CREATOR</p><blockquote>“{e(creator["quote"])}”</blockquote><p class="citation">{source_link(creator)}</p><p>{e(creator["context"])}</p></div>'
             creator_html = disclosure('The creator’s position', creator_body, 'creator-disclosure')
         source_details = disclosure('Citation & context', source_citation + context, 'entry-context', adaptive=True)
-        entries.append(f'''<article class="entry" id="{q['id']}" data-topic="{e(q['topic'])}"><div class="claim-side"><span class="entry-number">{q['number']:02d}</span><span class="topic">{e(q['topic'])}</span>{claim_side}</div><div class="quote-side"><p class="eyebrow">{e(q.get("quote_label", "IN HIS OWN WORDS"))}</p><blockquote>“{e(q['quote'])}”</blockquote><p class="lead-author">{e(q['author'])}</p>{source_details}{supporting_html}{conf_html}{creator_html}{history_html}<div class="entry-actions"><a href="{e(q['url'])}">Read the source {ARROW}</a><button type="button" data-copy="{q['id']}" hidden>Copy citation</button><a href="#{q['id']}" class="permalink" aria-label="Permanent link: {e(q['title'])}"># Share entry</a></div></div></article>''')
-    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)).replace('{{COLLECTION_NAV}}', collection_navigation(output_file)).replace('{{ENTRY_COUNT}}', str(len(data))))
+        entries.append(f'''<article class="entry" id="{q['id']}" data-topic="{e(q['topic'])}"><button type="button" class="objection-toggle" aria-expanded="false" hidden><span class="objection-number">{q['number']:02d}</span><span>{e(q["claim"])}</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button><div class="claim-side"><span class="entry-number">{q['number']:02d}</span><span class="topic">{e(q['topic'])}</span>{claim_side}</div><div class="quote-side"><p class="eyebrow">{e(q.get("quote_label", "IN HIS OWN WORDS"))}</p><blockquote>“{e(q['quote'])}”</blockquote><p class="lead-author">{e(q['author'])}</p>{source_details}{supporting_html}{conf_html}{creator_html}{history_html}<div class="entry-actions"><a href="{e(q['url'])}">Read the source {ARROW}</a><button type="button" data-copy="{q['id']}" hidden>Copy citation</button><a href="#{q['id']}" class="permalink" aria-label="Permanent link: {e(q['title'])}"># Share entry</a></div></div></article>''')
+    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)).replace('{{COLLECTION_NAV}}', collection_navigation(output_file)).replace('{{ENTRY_COUNT}}', str(len(data))).replace('{{ASSET_VERSION}}', ASSET_VERSION))
     print(f'Built {len(data)} entries into {output_file}')
 
 
