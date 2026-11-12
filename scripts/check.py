@@ -13,7 +13,7 @@ class Page(HTMLParser):
         if 'id' in a: self.ids.append(a['id'])
         if tag=='article': self.articles+=1
         if tag=='a': self.links.append(a.get('href',''))
-collections=[('index.html','quotes.json',13),('cessationists.html','cessationists.json',7),('christs-return.html','christs-return.json',6)]
+collections=[('index.html','quotes.json',15),('cessationists.html','cessationists.json',7),('christs-return.html','christs-return.json',6)]
 for page_file,data_file,expected in collections:
     html=(root/page_file).read_text()
     page=Page(); page.feed(html)
@@ -128,7 +128,8 @@ for q in hope:
         assert urlparse(item['url']).scheme=='https'
         assert all(escape(item[key]) in hope_html for key in ['quote','reference','context'])
         source=item['url'].split('#')[0]
-        hope_words[source]=hope_words.get(source,0)+len(item['quote'].split())
+        if not item.get('public_domain'):
+            hope_words[source]=hope_words.get(source,0)+len(item['quote'].split())
     for passage in q['scriptures']:
         assert urlparse(passage['url']).scheme=='https'
         assert escape(passage['reference']) in hope_html
@@ -138,4 +139,36 @@ for c in hope_confessions:
 assert all(count<=25 for count in hope_words.values()), 'Hope collection modern excerpts exceed 25 words per source'
 assert 'More cessationist voices' not in hope_html
 assert 'christs-return.html' in workflow and 'christs-return.json' in workflow
-print('PASS: new collection: six criticisms, six responses, two supporting voices, nine confessional excerpts, Scripture links, and separate personal statements.')
+print('PASS: new collection: six criticisms, six responses, ten supporting voices, ten confessional excerpts, Scripture links, and separate personal statements.')
+
+class PublishedCriticisms(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.disclosures=[]
+    def handle_starttag(self, tag, attrs):
+        a=dict(attrs)
+        if tag=='details' and 'published-criticism' in a.get('class','').split():
+            self.disclosures.append(a)
+
+for page_file,data_file,expected in collections:
+    html=(root/page_file).read_text()
+    parser=PublishedCriticisms(); parser.feed(html)
+    assert len(parser.disclosures)==expected
+    assert all('open' not in a and 'data-mobile-collapse' not in a for a in parser.disclosures), 'Published criticisms must stay closed by default at all widths'
+    modern_critic_words={}
+    for q in json.loads((root/data_file).read_text()):
+        c=q['criticism']
+        assert all(c.get(key) for key in ['author','quote','reference','url','edition','kind','context','verified'])
+        assert all(escape(c[key]) in html for key in ['quote','author','reference','context'])
+        entry=html.split('id="'+q['id']+'"',1)[1].split('</article>',1)[0]
+        assert entry.index(escape(q['claim'])) < entry.index('class="published-criticism"') < entry.index(escape(c['quote']))
+        assert urlparse(c['url']).scheme=='https'
+        if not c.get('public_domain'):
+            source=c['url'].split('#')[0]
+            modern_critic_words[source]=modern_critic_words.get(source,0)+len(c['quote'].split())
+    assert all(n<=25 for n in modern_critic_words.values()), 'Modern critic excerpts exceed 25 words per source'
+print('PASS: all 28 editorial claims precede their attributed criticisms; source disclosures start closed and are excluded from automatic reopening.')
+
+assert sum(len(q['supporting_quotes']) for q in hope)==10
+for q in hope:
+    assert any(item.get('early_christian') for item in [q,*q['supporting_quotes']]), 'Each Christ’s Return entry needs an ancient witness'
+print('PASS: all six Christ’s Return entries include an identified early Christian witness with source and scope notes.')

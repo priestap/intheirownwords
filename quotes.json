@@ -22,7 +22,18 @@
         "context": "The article contrasts human guilt for unbelief with faith and salvation as God’s free gift.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "William Lane Craig",
+      "quote": "So we can’t be responsible for our choices because nothing that we think or do is up to us.",
+      "url": "https://www.reasonablefaith.org/podcasts/defenders-podcast-series-2/s2-doctrine-of-creation/doctrine-of-creation-part-10/",
+      "reference": "Doctrine of Creation, Part 10, objection 3 to universal divine causal determinism",
+      "edition": "Reasonable Faith, Defenders series 2, published lecture transcript",
+      "kind": "An argument about logical consequences",
+      "context": "Craig argues that divine causal determination removes moral responsibility. He recognizes Reformed appeals to secondary causes but finds them inadequate. This is a philosophical criticism of Calvinism’s consistency, rather than a claim that Calvinists never verbally affirm responsibility. Calvin’s quotation establishes his affirmation; it does not by itself resolve Craig’s objection.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "robots",
@@ -63,7 +74,18 @@
         "context": "The chapter affirms that fallen people retain understanding and will, while teaching that those faculties are corrupted and that regeneration is necessary for spiritual good.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "James LeBlanc",
+      "quote": "So the accusation that EDD makes us all puppets, is to apply the greater truth of EDD and refuse to pretend along.",
+      "url": "https://soteriology101.com/2024/07/29/the-puppet-analogy-explained/",
+      "reference": "The Puppet Analogy explained, “Applied”",
+      "edition": "Soteriology 101 guest article, credited “Mindtrap James LeBlanc,” July 29, 2024",
+      "kind": "An analogy offered as a consequence of exhaustive decree",
+      "context": "EDD means exhaustive divine decree. LeBlanc argues that appealing to human consciousness does not remove the analogy’s force. He is arguing for what he thinks follows from Calvinistic determinism, not claiming Calvinists literally believe people are wooden puppets. The guest author, rather than the site’s host, is responsible for these words.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "grace",
@@ -109,7 +131,18 @@
         "context": "The subject is the regenerate person. The chapter describes the Spirit as enabling willing action, and then says that the regenerate act actively, not only passively.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "David Servant",
+      "quote": "They make Christians into people whom God forced against their wills to become His children.",
+      "url": "https://www.davidservant.com/calvinism-considered-2/",
+      "reference": "Calvinism Considered, chapter 2, concluding summary of total depravity and irresistible grace",
+      "edition": "Author’s online text, chapter 2",
+      "kind": "A description of conversion that Calvin explicitly rejects",
+      "context": "“They” refers to the doctrines of total depravity and irresistible grace. Servant treats inability to choose otherwise as coercion. Calvin instead describes the will being changed so that the person comes willingly. Establishing this difference in descriptions leaves their deeper disagreement about freedom and grace to be argued from Scripture.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "sin",
@@ -155,7 +188,18 @@
         "context": "The preceding paragraph condemns making God the author of sin. The following paragraphs distinguish God’s righteous judgment and government from human wickedness.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "Leighton Flowers",
+      "quote": "there was no rational answer against the charge of divine culpability for moral evil if Calvinism’s claims were true.",
+      "url": "https://soteriology101.com/2015/08/22/your-systematic-has-no-clothes/",
+      "reference": "Your Systematic Has No Clothes, opening recollection of his time as a Calvinist",
+      "edition": "Soteriology 101, August 22, 2015",
+      "kind": "An argument about moral consequences",
+      "context": "Flowers presents this as a conclusion he drew while still affirming Calvinism. He later expressly declines to accuse sincere Calvinists of devil worship. Calvin’s distinction between God’s purpose and the sinner’s intention states the position Flowers challenges; simply quoting the distinction does not prove it resolves every objection.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "fatalism",
@@ -196,7 +240,18 @@
         "context": "The chapter explicitly rejects the claim that providence makes human efforts unprofitable. Its example is Paul’s insistence that the sailors remain aboard the ship despite God’s promise of safety.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "Dale W. Decker",
+      "quote": "Saying that God ordains the means as well as the ends does not add meaning to the meaninglessness of determinism.",
+      "url": "https://soteriology101.com/2020/02/10/why-im-not-a-calvinist-even-though-i-should-be-determinism/",
+      "reference": "Why I’m not a Calvinist, Even Though I Should Be: Determinism, concluding discussion of ordained means",
+      "edition": "Soteriology 101 guest article by Dale W. Decker, February 10, 2020; posted by Eric Kemp",
+      "kind": "A challenge to the significance of ordained means",
+      "context": "Decker explicitly considers the Calvinist answer that God ordains means and rejects it as insufficient. His charge is not ignorance of that answer. Calvin’s insistence on using means distinguishes his practical teaching from passive fatalism; Decker’s philosophical objection remains a further question.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "evangelism",
@@ -381,6 +436,17 @@
           "verified": "2026-11-11"
         }
       ]
+    },
+    "criticism": {
+      "author": "John Wesley",
+      "quote": "But if this be so, then is all preaching vain.",
+      "url": "https://evangelicalarminians.org/whatever-that-scripture-proves-it-never-can-prove-this-john-wesleys-sermon-on-free-grace/",
+      "reference": "Free Grace, Sermon 128, paragraph 10",
+      "edition": "Text of the 1872 sermon edition, reproduced by the Society of Evangelical Arminians, September 26, 2013",
+      "kind": "An argument that predestination makes preaching unnecessary",
+      "context": "Wesley argues that election fixes salvation with or without preaching. He is drawing a consequence, rather than denying that Calvinists actually preach. Calvin’s response explicitly joins election to proclamation; the historical profiles also document evangelistic practice.",
+      "verified": "2026-11-12",
+      "public_domain": true
     }
   },
   {
@@ -406,7 +472,18 @@
         "context": "“Unfeignedly” means sincerely. The rest of the article affirms the serious promise of eternal life to everyone who comes and believes.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "John Wesley",
+      "quote": "You represent him as mocking his helpless creatures, by offering what he never intends to give.",
+      "url": "https://evangelicalarminians.org/whatever-that-scripture-proves-it-never-can-prove-this-john-wesleys-sermon-on-free-grace/",
+      "reference": "Free Grace, Sermon 128, paragraph 24",
+      "edition": "Text of the 1872 sermon edition, reproduced by the Society of Evangelical Arminians, September 26, 2013",
+      "kind": "A challenge to the sincerity of the universal invitation",
+      "context": "“Him” is Christ. Wesley questions how invitations to all can be sincere if saving grace is not given to all. He is not alleging that Calvinists never issue invitations. Calvin affirms a genuine general invitation while distinguishing it from the inward call; whether that distinction answers Wesley is the substantive disagreement.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
   },
   {
     "id": "prayer",
@@ -447,7 +524,18 @@
         "context": "The sentence continues by requiring unceasing private and public prayer during calamity. The chapter treats prayer as a real duty of the church.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "Ben Henshaw",
+      "quote": "Our prayers cannot have any effect on the eternal destiny of any individual.",
+      "url": "https://evangelicalarminians.org/examining-inconsistencies-in-calvinistic-monergism-part-1-intercessory-prayer/",
+      "reference": "Examining Inconsistencies in Calvinistic Monergism, Part 1: Intercessory Prayer, paragraph beginning “The Arminian contends”",
+      "edition": "Society of Evangelical Arminians, May 26, 2008; article explicitly credited to Ben Henshaw",
+      "kind": "A challenge concerning intercessory prayer for salvation",
+      "context": "Henshaw is describing what he regards as a consequence of Calvinism, not stating his own view that prayer is ineffective. His preceding sentence limits the point to prayer’s intended effect in another person’s salvation. He also considers the reply that God ordains prayer as a means and disputes its coherence. Calvin’s affirmative account of prayer states the position under discussion.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "holiness",
@@ -496,7 +584,18 @@
         "context": "The chapter rejects contempt for good works while denying that they earn salvation. It presents them as the necessary fruit of living faith.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "John Wesley",
+      "quote": "it directly tends to destroy that holiness which is the end of all the ordinances of God.",
+      "url": "https://evangelicalarminians.org/whatever-that-scripture-proves-it-never-can-prove-this-john-wesleys-sermon-on-free-grace/",
+      "reference": "Free Grace, Sermon 128, paragraph 11",
+      "edition": "Text of the 1872 sermon edition, reproduced by the Society of Evangelical Arminians, September 26, 2013",
+      "kind": "An alleged tendency, with an explicit qualification",
+      "context": "Wesley immediately says that he does not deny the holiness of everyone who holds predestination. His criticism concerns the doctrine’s supposed tendency to weaken motives for holiness. Calvin’s insistence that election leads to holiness answers the broad summary, while the dispute about its motivating force remains.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
   },
   {
     "id": "assurance",
@@ -537,7 +636,18 @@
         "context": "“Looking-glass” means mirror. The chapter directs readers to Christ and the preached gospel instead of seeking knowledge of election apart from him.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "Leighton Flowers",
+      "quote": "Calvinism cannot logically bring assurance to those who are consistent within it’s systematic.",
+      "url": "https://soteriology101.com/2015/06/25/why-calvinists-cannot-have-assurance/",
+      "reference": "Why Calvinists Cannot have Assurance, paragraph beginning “This final point”",
+      "edition": "Soteriology 101, June 25, 2015; original wording retained",
+      "kind": "A consistency argument about assurance",
+      "context": "Flowers’s argument concerns the possibility of divinely determined self-deception. It is not a survey claiming no Calvinist experiences assurance. Calvin directs believers to Christ rather than speculation about the secret decree; that positive teaching needs to be distinguished from Flowers’s challenge to its coherence.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   },
   {
     "id": "love",
@@ -552,7 +662,18 @@
     "translation": "William Pringle (1847)",
     "response": "Calvin speaks explicitly of God’s love for the human race when explaining the gift of his Son.",
     "context": "The same exposition distinguishes the universal gospel promise from election. Reformed writers differ about the terminology and senses of divine love; this excerpt should not erase those distinctions.",
-    "verified": "2026-11-11"
+    "verified": "2026-11-11",
+    "criticism": {
+      "author": "John Wesley",
+      "quote": "God is love only to some men",
+      "url": "https://evangelicalarminians.org/whatever-that-scripture-proves-it-never-can-prove-this-john-wesleys-sermon-on-free-grace/",
+      "reference": "Free Grace, Sermon 128, paragraph 20",
+      "edition": "Text of the 1872 sermon edition, reproduced by the Society of Evangelical Arminians, September 26, 2013",
+      "kind": "A claim about the scope of divine love",
+      "context": "Wesley says this is what predestinarian interpreters infer from election and mercy texts. He does not say they deny every kind of love toward every human being. Calvin’s excerpt affirms divine love toward mankind; it should not be expanded into an assertion that Calvin teaches an identical saving purpose for every individual.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
   },
   {
     "id": "spirit",
@@ -567,7 +688,18 @@
     "translation": "Henry Beveridge (1845)",
     "response": "The Spirit’s work is central to Calvin’s account of receiving the benefits of Christ. Union with Christ depends on the Spirit.",
     "context": "This establishes the Spirit’s place in Calvin’s theology. It does not settle debates about spiritual gifts or excuse coldness in particular churches.",
-    "verified": "2026-11-11"
+    "verified": "2026-11-11",
+    "criticism": {
+      "author": "John Wesley",
+      "quote": "it tends to obstruct, if not destroy, this great work of the Holy Ghost",
+      "url": "https://evangelicalarminians.org/whatever-that-scripture-proves-it-never-can-prove-this-john-wesleys-sermon-on-free-grace/",
+      "reference": "Free Grace, Sermon 128, paragraph 16",
+      "edition": "Text of the 1872 sermon edition, reproduced by the Society of Evangelical Arminians, September 26, 2013",
+      "kind": "A narrower criticism about the Spirit’s witness",
+      "context": "“This great work” means the Spirit’s witness and the believer’s assurance discussed in paragraphs 14–16. Wesley does not allege that Calvinists deny every activity of the Holy Spirit. This is a published example related to the broader editorial trope, not an exact equivalent of its sweeping wording. Calvin explicitly makes the Spirit indispensable to receiving Scripture.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
   },
   {
     "id": "scripture",
@@ -613,6 +745,69 @@
         "context": "The chapter receives the church fathers’ interpretations insofar as they agree with Scripture and permits dissent when they do not. Councils are placed under the same standard.",
         "verified": "2026-11-11"
       }
-    ]
+    ],
+    "criticism": {
+      "author": "Friedrich Bente",
+      "quote": "their theology is not founded on the Bible, but orientated in rationalism",
+      "url": "https://thebookofconcord.org/introductory-materials/historical-introductions/the-eleventh-articles-of-the-formula-of-concord-on-predestination/",
+      "reference": "Historical Introductions to the Book of Concord, section 232, concluding comparison of Calvinists and Synergists",
+      "edition": "Historical Introductions (1921), chapter XX, reproduced at BookofConcord.org",
+      "kind": "A related criticism of reason governing scriptural interpretation",
+      "context": "Bente makes this claim about both Calvinists and Synergists in a Lutheran defense of the Formula of Concord. His accusation concerns rational harmonization of Scripture, not literal allegiance to Calvin’s person. It is a related published challenge to biblical authority, narrower than the editorial wording. Calvin’s insistence on Scripture establishes his stated standard; each contested interpretation still needs examination.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
+  },
+  {
+    "id": "preaching-grace",
+    "number": 14,
+    "title": "Preaching grace and obedience",
+    "topic": "Christian life",
+    "claim": "If I preach that, people will live however they want.",
+    "quote": "We dream not of a faith which is devoid of good works, nor of a justification which can exist without them",
+    "reference": "Institutes 3.16.1",
+    "url": "https://www.ccel.org/ccel/calvin/institutes.v.xvii.html",
+    "author": "John Calvin",
+    "translation": "Henry Beveridge (1845)",
+    "response": "The objection is that preaching free justification will encourage careless living. Calvin answers that the faith which justifies also bears fruit in obedience. Good works do not earn justification, but they accompany living faith.",
+    "context": "Calvin is defending justification by faith against the charge that it destroys good works. Trent’s canon below condemns exemption from obedience; Calvin also rejects that exemption. Their disagreement concerns justification and the place of works, not whether Christians should obey God.",
+    "verified": "2026-11-12",
+    "criticism": {
+      "author": "Council of Trent",
+      "quote": "If any one saith, that the man who is justified and how perfect soever, is not bound to observe the commandments of God and of the Church, but only to believe; as if indeed the Gospel were a bare and absolute promise of eternal life, without the condition of observing the commandments ; let him be anathema.",
+      "reference": "Session VI, Decree on Justification, Canon XX (January 13, 1547)",
+      "url": "https://history.hanover.edu/texts/trent/ct06.html",
+      "edition": "J. Waterworth translation (1848), Hanover Historical Texts Project",
+      "kind": "A historical condemnation related to the objection about obedience",
+      "context": "This is Trent’s wording, not the modern preaching slogan above. The council condemns the claim that justified people need only believe and are exempt from commandments. It does not say that every Calvinist lives carelessly. Calvin’s reply denies a faith devoid of good works while distinguishing works from the ground of justification.",
+      "verified": "2026-11-12",
+      "public_domain": true
+    }
+  },
+  {
+    "id": "all-means-all",
+    "number": 15,
+    "title": "Who is included in “all”?",
+    "topic": "Biblical interpretation",
+    "claim": "All means all and that’s all that all means.",
+    "quote": "But the present discourse relates to classes of men, and not to individual persons; for his sole object is, to include in this number princes and foreign nations.",
+    "reference": "Commentary on 1 Timothy 2:4",
+    "url": "https://www.ccel.org/c/calvin/comment2/1tim.htm",
+    "author": "John Calvin",
+    "translation": "William Pringle (1856)",
+    "response": "The slogan assumes that “all” must mean every individual without exception. Calvin reads this passage in light of Paul’s call to pray for kings and people in authority: salvation is not confined to one nation or social rank. The question is who “all” includes in this particular passage.",
+    "context": "This is Calvin’s interpretation of 1 Timothy 2:4, not a rule that “all” can never mean every individual. His interpretation must be assessed against the passage and its context; quoting him establishes his position without settling the exegetical dispute.",
+    "verified": "2026-11-12",
+    "criticism": {
+      "author": "An unnamed pastor, as recalled by R. Scott Clark",
+      "quote": "all means all and that’s all that all means.",
+      "reference": "Limited Atonement, discussion of “all”",
+      "url": "https://heidelblog.net/2009/04/limited-atonement-article/",
+      "edition": "The Heidelblog, R. Scott Clark, April 17, 2009; typographic apostrophe normalized",
+      "kind": "A common slogan reported by a Reformed respondent",
+      "context": "Clark recalls a pastor using this slogan and then argues against it. Clark is reporting the objection, not endorsing it; the pastor is unnamed. The slogan above is therefore presented as a common trope rather than attributed to a named critic or to all non-Calvinists.",
+      "verified": "2026-11-12",
+      "public_domain": false
+    }
   }
 ]

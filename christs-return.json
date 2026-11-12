@@ -34,6 +34,17 @@
         "edition": "Baker Books, 2013; publisher’s preview hosted by Christian Study Library",
         "context": "The two passages under discussion are 1 Corinthians 15:50–55 and 1 Thessalonians 4:13–5:11. Riddlebarger places the gathering at Christ’s bodily return and distinguishes this from a separate pretribulation rapture. The excerpt describes his account of the historic Protestant reading; it is not a claim that all Protestants agree.",
         "verified": "2026-11-11"
+      },
+      {
+        "author": "John Chrysostom",
+        "quote": "And as He descends, we go forth to meet Him",
+        "url": "https://www.newadvent.org/fathers/230408.htm",
+        "reference": "Homily 8 on First Thessalonians, exposition of 1 Thessalonians 4:16–18, paragraph beginning “For He received”",
+        "edition": "Early Christian author (c. 349–407); NPNF, First Series, vol. 13 (1889), English text as revised and published by New Advent",
+        "context": "Chrysostom expressly describes believers being caught up to meet the descending Lord and joins the meeting to the resurrection. He compares it to going out to greet an arriving king. This supports a real gathering at Christ’s coming, without making him a participant in the modern debate over a pretribulation rapture.",
+        "verified": "2026-11-12",
+        "early_christian": true,
+        "witness_label": "ANCIENT WITNESS · FOURTH/FIFTH CENTURY"
       }
     ],
     "confessions": [
@@ -112,6 +123,17 @@
         "edition": "The Riddleblog, January 13, 2022",
         "context": "Riddlebarger locates participation in Abraham’s promises in union with Christ, whom he identifies as the true Israel. He also rejects a reconstituted national Israel after Christ’s return as the fulfillment he is discussing. His view should not be represented as either denying Jews salvation or affirming the distinct national program he explicitly disputes.",
         "verified": "2026-11-11"
+      },
+      {
+        "author": "John Chrysostom",
+        "quote": "Behold, they are exalted to one and the same dignity, the two have become one,",
+        "url": "https://www.newadvent.org/fathers/230105.htm",
+        "reference": "Homily 5 on Ephesians, exposition of Ephesians 2:13, paragraph beginning “Behold”",
+        "edition": "Early Christian author (c. 349–407); Gross Alexander translation, NPNF, First Series, vol. 13 (1889), revised for New Advent",
+        "context": "The two are Jewish and Gentile believers, united in Christ rather than one group enjoying a superior saving status. Later in the homily he describes both being made new in Christ. This is ancient witness to their unity, not proof that Chrysostom rejected every view now called replacement theology or endorsed every claim about Israel’s national future.",
+        "verified": "2026-11-12",
+        "early_christian": true,
+        "witness_label": "ANCIENT WITNESS · FOURTH/FIFTH CENTURY"
       }
     ],
     "confessions": [
@@ -158,29 +180,40 @@
     "id": "christs-present-kingdom",
     "number": 3,
     "topic": "Christ’s kingdom",
-    "title": "A kingdom already inaugurated",
-    "claim": "You don’t believe in Christ’s kingdom.",
-    "quote": "Amillennialism sees Revelation 20 as a description of the reign of Christ with the saints throughout the entire present age.",
-    "author": "Keith Mathison",
-    "url": "https://learn.ligonier.org/articles/millennial-maze",
-    "reference": "The Millennial Maze, “Amillennialism”",
+    "title": "A present reign, awaiting its fullness",
+    "claim": "You don’t believe in a literal millennium.",
+    "quote": "Therefore the Church even now is the kingdom of Christ, and the kingdom of heaven. Accordingly, even now His saints reign with Him, though otherwise than as they shall reign hereafter;",
+    "author": "Augustine of Hippo",
+    "url": "https://www.ccel.org/ccel/schaff/npnf102.iv.XX.9.html",
+    "reference": "The City of God, Book XX, chapter 9, paragraph beginning “We must understand”",
     "edition_label": "Source",
-    "edition": "Ligonier Ministries, November 25, 2013",
-    "verified": "2026-11-11",
-    "response": "The disagreement is about the nature and timing of the millennium. The amillennial reading affirms Christ’s present reign and its future consummation; the prefix alone does not state its positive teaching.",
-    "context": "MacArthur’s qualification matters: he explicitly recognizes the spiritual and heavenly readings. The confessional language affirms a present kingdom but does not prove a particular reading of Revelation 20.",
+    "edition": "Marcus Dods translation, in Nicene and Post-Nicene Fathers, First Series, vol. 2, edited by Philip Schaff (1887); CCEL transcription",
+    "verified": "2026-11-12",
+    "response": "Augustine affirms a real kingdom and a real reign with Christ now, while distinguishing that present reign from its future fullness. He opens this chapter by identifying the saints’ reign during the thousand years with the time of Christ’s first coming; the edition’s note clarifies the interval between his first and second comings. This is an interpretation of what Revelation 20 describes, rather than a denial that its promised reign exists.",
+    "context": "Augustine is an ancient Christian witness, not a sixteenth-century Reformer or a spokesman for every modern amillennial position. His present reign includes both living believers and the faithful departed; the chapter also contains sacramental teaching not adopted wholesale here. Calvin’s supporting passage likewise places the thousand years in the church’s life in this world. Neither writer affirms an exact thousand-year earthly kingdom after Christ returns. That disagreement remains explicit; the point is that they affirm the reality of Christ’s reign while locating the passage’s fulfillment differently. The creator’s confession allows liberty among millennial views within its stated boundaries.",
     "criticism": {
       "author": "John MacArthur",
-      "quote": "there is no millennium",
+      "quote": "there will be no thousand-year reign of Christ on the earth.",
       "url": "https://www.gty.org/sermons/print/90-334/why-every-calvinist-should-be-a-premillennialist-part-1",
-      "reference": "Why Every Calvinist Should Be a Premillennialist, Part 1, explanation of the prefix a-",
-      "context": "MacArthur immediately describes spiritual and heavenly interpretations of the reign. He does not claim these writers deny every form of Christ’s kingship.",
+      "reference": "Why Every Calvinist Should Be a Premillennialist, Part 1, paragraph beginning “But, for certain”",
+      "context": "MacArthur is describing the amillennial position he rejects. He immediately distinguishes it from the future earthly millennium he affirms and elsewhere in this discussion acknowledges spiritual and heavenly readings. The objection is about what Revelation 20 promises, rather than whether Christ has any kingdom.",
       "edition": "Grace to You, sermon 90-334",
-      "verified": "2026-11-11",
-      "kind": "A broad description that needs qualification"
+      "verified": "2026-11-12",
+      "kind": "A real disagreement about the millennium"
     },
     "supporting_label": "More voices",
-    "supporting_quotes": [],
+    "supporting_quotes": [
+      {
+        "author": "John Calvin",
+        "quote": "since the thousand years there mentioned refer not to the eternal blessedness of the Church, but only to the various troubles which await the Church militant in this world.",
+        "url": "https://ccel.org/ccel/calvin/institutes/institutes.v.xxvi.html",
+        "reference": "Institutes of the Christian Religion III.25.5, discussion of Revelation 20:4",
+        "edition": "Henry Beveridge translation (1845); CCEL transcription",
+        "context": "“Church militant” means the church in its present earthly struggle. Calvin places this passage’s thousand years here, rather than in the final blessedness after resurrection. His surrounding criticism also targets limiting the saints’ future happiness to one thousand years. Modern premillennialists generally affirm everlasting blessedness too, so that part of his criticism should not be assigned to them without qualification. The excerpt is Calvin’s text, distinct from the later editor’s notes.",
+        "public_domain": true,
+        "verified": "2026-11-12"
+      }
+    ],
     "confessions": [
       {
         "author": "Historic confessional witness",
@@ -214,23 +247,26 @@
         "reference": "1 Corinthians 15:25-26",
         "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+15:25-26&version=KJV"
       }
-    ]
+    ],
+    "public_domain": true,
+    "early_christian": true,
+    "quote_label": "ANCIENT WITNESS · IN HIS OWN WORDS"
   },
   {
     "id": "scripture-interprets-scripture",
     "number": 4,
     "topic": "Reading prophecy",
-    "title": "Fulfillment and the rule of interpretation",
-    "claim": "You spiritualize away what the Bible plainly says.",
-    "quote": "True Israel became defined by union with the true Israelite—Jesus Christ (Gal. 3:16, 29).",
-    "author": "Keith Mathison",
-    "url": "https://learn.ligonier.org/articles/the-church-and-israel-in-the-new-testament",
-    "reference": "The Church and Israel in the New Testament, discussion of the faithful remnant",
+    "title": "Literal reading and literary form",
+    "claim": "You don’t take the Bible literally.",
+    "quote": "to interpret the Bible literally is to interpret the Bible the way it was written.",
+    "author": "R. C. Sproul",
+    "url": "https://learn.ligonier.org/podcasts/ultimately-with-rc-sproul/how-to-interpret-the-bible-literally",
+    "reference": "How to Interpret the Bible Literally, transcript paragraph explaining sensus literalis",
     "edition_label": "Source",
-    "edition": "Published text at the linked primary source",
-    "verified": "2026-11-11",
-    "response": "The response appeals to the apostles’ own reading of the promises in Christ. Its claim is that biblical authors supply the pattern for fulfillment, rather than that a reader may invent a hidden meaning.",
-    "context": "Both sides claim Scripture should govern interpretation. Each disputed passage still needs an argument from its language, genre, context, and New Testament use. Saying “fulfillment” does not validate an arbitrary allegory.",
+    "edition": "Ultimately with R. C. Sproul, Ligonier Ministries, episode published July 2, 2025; publication date of this excerpt, not a verified recording date",
+    "verified": "2026-11-12",
+    "response": "Sproul directly affirms literal interpretation and defines it by the way a text was written. He distinguishes historical narrative, poetry, parables, and other literary forms. He also explicitly rejects turning historical miracle accounts into moral symbolism. On that definition, recognizing a symbol is part of taking the text seriously, not permission to explain away the events it records.",
+    "context": "This passage states a Reformed principle of interpretation; it is not itself an exposition of Revelation 20. Premillennial interpreters also recognize figures of speech, as the critic’s full article makes clear. Their disagreement with amillennialists concerns which passages are symbolic and how to identify their fulfillment. Sproul’s principle corrects a blanket accusation, but each disputed interpretation still needs to be defended from the actual passage. The supporting excerpt applies Scripture-interpreting-Scripture to Revelation specifically.",
     "criticism": {
       "author": "GotQuestions.org",
       "quote": "Spiritualizing a passage is dangerous because it moves the basis for accurate interpretation from Scripture to the mind of the reader.",
@@ -242,7 +278,28 @@
       "kind": "An interpretive disagreement"
     },
     "supporting_label": "More voices",
-    "supporting_quotes": [],
+    "supporting_quotes": [
+      {
+        "author": "Kim Riddlebarger",
+        "quote": "we must read the Book of Revelation through the rest of the Bible.",
+        "url": "https://www.modernreformation.org/resources/articles/a-present-or-future-millennium",
+        "reference": "A Present or Future Millennium, paragraph beginning “Following this method”",
+        "edition": "Modern Reformation, author’s essay in the publisher’s online archive",
+        "context": "Riddlebarger argues that clearer biblical teaching should govern the reading of difficult apocalyptic passages. This identifies his proposed interpretive rule; it does not establish that every application of that rule is correct or that premillennialists reject comparing Scripture with Scripture.",
+        "verified": "2026-11-12"
+      },
+      {
+        "author": "Augustine of Hippo",
+        "quote": "we must also pay heed to that which tells us not to take a literal form of speech as if it were figurative.",
+        "url": "https://www.newadvent.org/fathers/12023.htm",
+        "reference": "On Christian Doctrine III.10.14, opening sentence",
+        "edition": "Early Christian author (354–430); James Shaw translation, NPNF, First Series, vol. 2 (1887), revised for New Advent",
+        "context": "Augustine gives this rule alongside the complementary warning against treating metaphorical language as literal. The excerpt answers the idea that recognizing figures gives unlimited permission to allegorize. His particular rules and applications still require evaluation; this passage is not itself an interpretation of the millennium.",
+        "verified": "2026-11-12",
+        "early_christian": true,
+        "witness_label": "ANCIENT WITNESS · FOURTH/FIFTH CENTURY"
+      }
+    ],
     "confessions": [
       {
         "author": "Historic confessional witness",
@@ -256,16 +313,16 @@
     ],
     "scriptures": [
       {
-        "reference": "Luke 24:25-27",
-        "url": "https://www.biblegateway.com/passage/?search=Luke+24:25-27&version=KJV"
+        "reference": "Revelation 1:20 · the vision explains its own symbols",
+        "url": "https://www.biblegateway.com/passage/?search=Revelation+1%3A20&version=KJV"
       },
       {
-        "reference": "Galatians 3:16-29",
-        "url": "https://www.biblegateway.com/passage/?search=Galatians+3:16-29&version=KJV"
+        "reference": "Psalm 91:4 · wings and refuge in poetic language",
+        "url": "https://www.biblegateway.com/passage/?search=Psalm+91%3A4&version=KJV"
       },
       {
-        "reference": "Acts 15:13-18",
-        "url": "https://www.biblegateway.com/passage/?search=Acts+15:13-18&version=KJV"
+        "reference": "Luke 1:1–4 · historical testimony and careful narration",
+        "url": "https://www.biblegateway.com/passage/?search=Luke+1%3A1-4&version=KJV"
       }
     ]
   },
@@ -275,15 +332,15 @@
     "topic": "Christian hope",
     "title": "Hope through suffering",
     "claim": "Your view is pessimistic and defeatist.",
-    "quote": "That is a thoroughly optimistic view of the kingdom of God.",
-    "author": "Chris Gordon",
-    "url": "https://heidelblog.net/2024/01/amillennialism-is-not-pessimistic/",
-    "reference": "Amillennialism Is Not Pessimistic, concluding sentence",
+    "quote": "The kingdom of Jesus Christ will grow and thrive all the while persecution and political conditions appear to be getting worse",
+    "author": "Kim Riddlebarger",
+    "url": "https://www.kimriddlebarger.com/the-riddleblog/the-binding-of-satan",
+    "reference": "The Binding of Satan, paragraph discussing nations that persecute Christians",
     "edition_label": "Source",
-    "edition": "The Heidelblog, January 20, 2024",
-    "verified": "2026-11-11",
-    "response": "Gordon locates optimism in Christ’s effective rule, the increase of his church, and the kingdom’s consummation. He regards suffering and persecution as compatible with the success of the gospel.",
-    "context": "Gentry’s narrower historical question deserves an answer on its own terms. Gordon does not promise the cultural dominance Gentry expects; their disagreement concerns the shape of victory before Christ’s return, rather than whether Christ finally wins.",
+    "edition": "The Riddleblog, June 13, 2022",
+    "verified": "2026-11-12",
+    "response": "Riddlebarger expects the gospel to accomplish its purpose and Christ’s kingdom to grow, including under persecution. His stated hope concerns the church’s mission in the present age, not only victory after history has ended. He explicitly distinguishes that growth from a guarantee of corresponding cultural, economic, or political progress.",
+    "context": "Gentry acknowledges the final victory affirmed by other evangelical millennial views. His criticism concerns widespread, lasting cultural success before Christ’s return. Riddlebarger’s expectation of gospel advance answers a broad charge of defeatism but does not affirm Gentry’s particular expectation of cultural transformation. Their historical disagreement is real. Gordon’s supporting statement similarly identifies growth of the church and the overthrow of the devil’s works as grounds for hope.",
     "criticism": {
       "author": "Kenneth L. Gentry, Jr.",
       "quote": "Historically amillennialism has tended to be pessimistic in terms of the question of widespread, long-lasting cultural success",
@@ -295,7 +352,28 @@
       "kind": "A broad description that needs qualification"
     },
     "supporting_label": "More voices",
-    "supporting_quotes": [],
+    "supporting_quotes": [
+      {
+        "author": "Chris Gordon",
+        "quote": "That is a thoroughly optimistic view of the kingdom of God.",
+        "url": "https://heidelblog.net/2024/01/amillennialism-is-not-pessimistic/",
+        "reference": "Amillennialism Is Not Pessimistic, concluding sentence",
+        "edition": "The Heidelblog, January 20, 2024",
+        "context": "“That” refers to prayer for God to rule by his Word and Spirit, preserve and increase the church, and destroy the devil’s works until Christ’s return. Gordon explicitly calls that expectation optimistic; it does not include the cultural dominance Gentry expects.",
+        "verified": "2026-11-11"
+      },
+      {
+        "author": "John Chrysostom",
+        "quote": "the greater the intensity of our persecutions, the greater should be the increase of your good hope;",
+        "url": "https://www.newadvent.org/fathers/220202.htm",
+        "reference": "Homily 2 on Second Corinthians, exposition of 2 Corinthians 1:6, paragraph beginning “Do you see again”",
+        "edition": "Early Christian author (c. 349–407); Talbot W. Chambers translation, NPNF, First Series, vol. 12 (1889), revised for New Advent",
+        "context": "Chrysostom is explaining Paul’s consolation to suffering Christians: persecution gives grounds for strengthened hope rather than despair. This supplies an ancient foundation for hope through suffering. It does not establish that Chrysostom would adopt a particular modern forecast about the church’s cultural influence.",
+        "verified": "2026-11-12",
+        "early_christian": true,
+        "witness_label": "ANCIENT WITNESS · FOURTH/FIFTH CENTURY"
+      }
+    ],
     "confessions": [
       {
         "author": "Historic confessional witness",
@@ -328,15 +406,15 @@
     "topic": "Israel’s future",
     "title": "Praying for Jewish people to come to Christ",
     "claim": "You think God is finished with the Jews.",
-    "quote": "the gospel propagated throughout the world, the Jews called, the fullness of the Gentiles brought in;",
-    "author": "Westminster Assembly",
-    "url": "https://www.opc.org/lc.html",
-    "reference": "Westminster Larger Catechism, Q. 191",
+    "quote": "The future restoration of the nation of Israel will involve their re-grafting into the olive tree, the one people of God.",
+    "author": "Keith Mathison",
+    "url": "https://learn.ligonier.org/articles/the-church-and-israel-in-the-new-testament",
+    "reference": "The Church and Israel in the New Testament, conclusion",
     "edition_label": "Source",
-    "edition": "Historic English text published by the Orthodox Presbyterian Church",
-    "verified": "2026-11-11",
-    "response": "This historic Reformed catechism specifically teaches Christians to pray for Jewish people to be called, alongside the gathering of Gentiles. Jewish salvation has a positive place in its account of the kingdom.",
-    "context": "The national question and the salvation question must remain distinct. Reformed interpreters disagree about whether Romans 11 predicts a future widespread conversion and how that relates to national promises. This entry answers the broad exclusion claim, while retaining MacArthur’s more specific concern.",
+    "edition": "Ligonier Ministries / Tabletalk, October 1, 2012",
+    "verified": "2026-11-12",
+    "response": "Mathison explicitly expects a future restoration of ethnic Israel through faith in Jesus Christ. He understands that restoration as being grafted into the one people of God, rather than a separate way of salvation. This is a direct example of a Reformed writer who rejects the idea that God is finished with the Jews.",
+    "context": "Mathison’s expectation is not shared by all Reformed interpreters: his article expressly discusses differing readings of “all Israel” in Romans 11. His position should not be assigned to Calvin, to every amillennialist, or to the site creator merely because they share some other convictions. MacArthur’s specific expectation of a future national kingdom is a further question; conversion and re-grafting do not by themselves establish every territorial or political claim. The creator’s linked confession affirms Israel’s descendants remain beloved without defining all these expectations.",
     "criticism": {
       "author": "John MacArthur",
       "quote": "Israel has been permanently set aside",
@@ -348,7 +426,19 @@
       "kind": "A broad description that needs qualification"
     },
     "supporting_label": "More voices",
-    "supporting_quotes": [],
+    "supporting_quotes": [
+      {
+        "author": "John Chrysostom",
+        "quote": "He waits for all the Gentiles that are to believe to come in, and then they also shall come.",
+        "url": "https://www.newadvent.org/fathers/210219.htm",
+        "reference": "Homily 19 on Romans, comments on Romans 11:28, sentence beginning “Nevertheless God”",
+        "edition": "Early Christian author (c. 349–407); Walker, Sheppard, and Browne translation, revised by George B. Stevens, NPNF, First Series, vol. 11 (1889); revised for New Advent",
+        "context": "“They” refers to the Jewish people whose calling Chrysostom says God has not cut short. He connects their turning to Christ’s second coming in the surrounding discussion. This records an ancient expectation of Jewish belief, not an endorsement of the homily’s harsh polemical treatment of Jews, a separate way of salvation, or a prediction of a modern political state.",
+        "verified": "2026-11-12",
+        "early_christian": true,
+        "witness_label": "ANCIENT WITNESS · FOURTH/FIFTH CENTURY"
+      }
+    ],
     "confessions": [
       {
         "quote": "out of the whole human race, a church chosen to everlasting life, agreeing in true faith;",
@@ -356,6 +446,14 @@
         "url": "https://www.frcna.org/heidelberg-catechism",
         "edition": "Historic English text as published by the Free Reformed Churches of North America",
         "context": "The answer describes Christ gathering his church throughout history. It affirms a worldwide people of faith without resolving every promise about ethnic Israel.",
+        "verified": "2026-11-11"
+      },
+      {
+        "quote": "the gospel propagated throughout the world, the Jews called, the fullness of the Gentiles brought in;",
+        "url": "https://www.opc.org/lc.html",
+        "reference": "Westminster Larger Catechism, Q. 191",
+        "edition": "Historic English text published by the Orthodox Presbyterian Church",
+        "context": "This historic Reformed catechism expressly teaches prayer for Jewish calling alongside the gathering of Gentiles. Its wording affirms the church’s concern for Jewish salvation without specifying every national, territorial, or chronological expectation.",
         "verified": "2026-11-11"
       }
     ],

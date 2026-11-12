@@ -36,6 +36,8 @@ def collection_navigation(output_file):
 
 def build(data_file, template_file, output_file):
     data = json.loads((root / data_file).read_text())
+    if output_file == 'index.html':
+        assert (root / 'assets/calvin-engraving.png').is_file(), 'Homepage Calvin portrait is missing'
     entries = []
     for q in data:
         confessions = q.get('confessions', [])
@@ -49,7 +51,8 @@ def build(data_file, template_file, output_file):
         supporting = q.get('supporting_quotes', [])
         voices = ''
         for voice in supporting:
-            voices += f'<div class="witness supporting-voice"><blockquote>“{e(voice["quote"])}”</blockquote><p class="citation"><strong>{e(voice["author"])}</strong> · {source_link(voice)}<span>{e(voice["edition"])}</span></p><p class="witness-context">{e(voice["context"])}</p></div>'
+            witness_label = f'<p class="eyebrow">{e(voice["witness_label"])}</p>' if voice.get('witness_label') else ''
+            voices += f'<div class="witness supporting-voice">{witness_label}<blockquote>“{e(voice["quote"])}”</blockquote><p class="citation"><strong>{e(voice["author"])}</strong> · {source_link(voice)}<span>{e(voice["edition"])}</span></p><p class="witness-context">{e(voice["context"])}</p></div>'
         supporting_html = disclosure(f'{q.get("supporting_label", "More cessationist voices")} · {len(supporting)}', f'<div class="supporting-voices">{voices}</div>', 'supporting-disclosure', adaptive=True) if supporting else ''
 
         history = q.get('historical_witnesses')
@@ -65,8 +68,9 @@ def build(data_file, template_file, output_file):
         criticism = q.get('criticism')
         if criticism:
             critic_context = f'<p class="citation">{source_link(criticism)}<span>{e(criticism["edition"])}</span></p><p class="criticism-kind">{e(criticism["kind"])}</p><p class="critic-context">{e(criticism["context"])}</p>'
-            critic_details = disclosure('Citation & context', critic_context, 'critic-details', adaptive=True)
-            claim_side = f'<h3 class="mobile-entry-heading">{e(q["title"])}</h3><p class="eyebrow">THE CRITICISM</p>{f'<p class="common-claim"><strong>{e(q["claim"])}</strong></p><p class="claim-note">Common claim · editorial summary</p>' if data_file == 'christs-return.json' else ''}<blockquote class="critic-quote"><p>“{e(criticism["quote"])}”</p></blockquote><p class="critic-author">{e(criticism["author"])}</p>{critic_details}'
+            original = f'<blockquote class="critic-quote"><p>“{e(criticism["quote"])}”</p></blockquote><p class="critic-author">{e(criticism["author"])}</p>{critic_context}'
+            original_details = disclosure('Published criticism & context', original, 'published-criticism')
+            claim_side = f'<p class="eyebrow">THE COMMON CLAIM</p><h3>{e(q["claim"])}</h3><p class="claim-note">Editorial summary · see the published criticism below</p>{original_details}'
         else:
             claim_side = f'<p class="eyebrow">THE COMMON CLAIM</p><h3>{e(q["claim"])}</h3><p class="claim-note">Editorial summary · see our approach</p>'
 
@@ -83,7 +87,7 @@ def build(data_file, template_file, output_file):
             creator_html = disclosure('The creator’s position', creator_body, 'creator-disclosure')
         source_details = disclosure('Citation & context', source_citation + context, 'entry-context', adaptive=True)
         entries.append(f'''<article class="entry" id="{q['id']}" data-topic="{e(q['topic'])}"><div class="claim-side"><span class="entry-number">{q['number']:02d}</span><span class="topic">{e(q['topic'])}</span>{claim_side}</div><div class="quote-side"><p class="eyebrow">{e(q.get("quote_label", "IN HIS OWN WORDS"))}</p><blockquote>“{e(q['quote'])}”</blockquote><p class="lead-author">{e(q['author'])}</p>{source_details}{supporting_html}{conf_html}{creator_html}{history_html}<div class="entry-actions"><a href="{e(q['url'])}">Read the source {ARROW}</a><button type="button" data-copy="{q['id']}" hidden>Copy citation</button><a href="#{q['id']}" class="permalink" aria-label="Permanent link: {e(q['title'])}"># Share entry</a></div></div></article>''')
-    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)).replace('{{COLLECTION_NAV}}', collection_navigation(output_file)))
+    (root / output_file).write_text((root / template_file).read_text().replace('{{ENTRIES}}', '\n'.join(entries)).replace('{{COLLECTION_NAV}}', collection_navigation(output_file)).replace('{{ENTRY_COUNT}}', str(len(data))))
     print(f'Built {len(data)} entries into {output_file}')
 
 

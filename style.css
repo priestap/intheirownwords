@@ -77,3 +77,18 @@ body{font-size:16px}.site-header nav{font-size:14px}.intro{font-size:calc(17px *
  .collection-tabs a[aria-current=page] .collection-state{color:var(--accent);font-weight:600}
 }
 @media print{.collection-chooser-label{display:none}}
+
+/* Keep the source criticism available without obscuring the editorial claim. */
+.published-criticism{margin-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.entry .published-criticism>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 0;font-size:12px;color:var(--ink)}
+.published-criticism .critic-quote{margin:12px 0}
+.published-criticism .critic-quote>p{font-size:calc(20px * var(--reading-scale));color:var(--ink)}
+.published-criticism .citation{margin-bottom:12px}
+
+/* Keep Calvin’s homepage portrait explicit and visible at every screen size. */
+.calvin-hero::before{display:none}
+.calvin-portrait{position:absolute;left:-70px;bottom:-35px;height:115%;width:auto;max-width:none;z-index:-1;pointer-events:none;opacity:.38;mask-image:linear-gradient(to right,#000 0%,#000 30%,transparent 95%);-webkit-mask-image:linear-gradient(to right,#000 0%,#000 30%,transparent 95%)}
+html[data-theme=dark] .calvin-portrait{opacity:.45}
+@media(max-width:900px){.calvin-portrait{left:-100px;height:105%;bottom:0}}
+@media(max-width:620px){.calvin-portrait{width:350px;height:auto;left:-70px;top:10px;bottom:auto;opacity:.3}html[data-theme=dark] .calvin-portrait{opacity:.38}}
+@media print{.calvin-portrait{display:none}}
